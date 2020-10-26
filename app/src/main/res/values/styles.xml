@@ -1,0 +1,60 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorOrange</item>
+        <item name="colorPrimaryDark">@color/colorOrangeDark</item>
+        <item name="background">@color/colorWhite</item>
+
+    </style>
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+    <style name="MainButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/mainbutton</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">309px</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="SecondButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/secondbutton</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:shadowColor">#888888</item>
+        <item name="android:layout_width">267dp</item>
+        <item name="android:layout_height">45dp</item>
+    </style>
+    <style name="loginRect" parent="Theme.MaterialComponents">
+        <item name="android:background">@drawable/loginrect</item>
+    </style>
+
+    <style name="bgasistent" parent="Theme.MaterialComponents">
+        <item name="android:background">@drawable/bgasistente</item>
+    </style>
+    <style name="bgLY" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/bglinearly</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:shadowColor">#888888</item>
+    </style>
+
+
+
+    <style name="EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/etstyle</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textColorHint">@color/colorLightGray</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">50px</item>
+        <item name="android:paddingTop">7px</item>
+
+    </style>
+
+
+
+</resources>

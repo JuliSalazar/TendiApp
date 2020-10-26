@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorOrange">#FE811E</color>
+    <color name="colorOrangeDark">#ED700D</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#777777</color>
+    <color name="bgEditText">#F4F4F4</color>
+    <color name="colorLightGray">#E5E5E5</color>
+    <color name="colorYellow">#FFC100</color>
+    <color name="colorLightText">#8F8F8F</color>
+    <color name="colorGreen">#4CBE42</color>
+    <color name="colorDivider">#F0F0F0</color>
+    <color name="colorStroke">#C4C4C4</color>
+    <color name="colorFontInfoPedido">#949494</color>
+    <color name="colorPedidoListo">#FFC100</color>
+    <color name="bgLinearLy">#F2F2F2</color>
+    <color name="finan">#38BF7E</color>
+    <color name="benef">#5131A3</color>
+    <color name="navGray">#BDBDBD</color>
+
+</resources>

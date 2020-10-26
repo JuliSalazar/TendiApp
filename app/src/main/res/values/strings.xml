@@ -1,0 +1,74 @@
+<resources>
+    <!-- Pantalla inicial -->
+    <string name="app_name">Tendi</string>
+    <string name="hi">¡Hola!</string>
+    <string name="msjBienvenida">¡Te damos la bienvenida a Tendi!</string>
+    <string name="cel">Número de celular</string>
+    <string name="ejCel">Ej: 3014731994</string>
+    <string name="password">Contraseña</string>
+    <string name="ejContra">*************</string>
+    <string name="iniciar">Iniciar sesión</string>
+
+    <!-- Pantalla registro -->
+    <string name="title">¿Primera vez en tendi?</string>
+    <string name="textRegistro">Sigue las instrucciones para hacer parte de la familia Tendi, ¡no te tomará más de un minuto!</string>
+    <string name="tender">Soy un tendero</string>
+    <string name="user">Soy un usuario</string>
+
+    <!-- Pantalla datosTendero -->
+    <string name="instru">Rellena tus datos</string>
+    <string name="name">Nombre</string>
+    <string name="ejname">Ej: Juan Carlos</string>
+    <string name="lastname">Apellido</string>
+    <string name="ejlastname">Ej: Rodriguez</string>
+    <string name="cont">Continuar</string>
+
+    <!-- Pantalla datosTienda -->
+    <string name="instruT">Rellena los datos de tu negocio</string>
+    <string name="nameT">Nombre de la tienda</string>
+    <string name="ejnameT">Ej: Tienda Mela</string>
+    <string name="direction">Dirección de la tienda</string>
+    <string name="ejdirect">Ej: Cra 8 # 8B- 36</string>
+    <string name="rut">R.U.T</string>
+
+    <string name="finalizar">¡Crea una cuenta!</string>
+
+
+    <!-- Pantalla home -->
+    <string name="ped">Pedidos</string>
+    <string name="vent">Ventas</string>
+    <string name="fin">Finanzas</string>
+    <string name="bene">Beneficios</string>
+    <string name="titleVentas">Ventas durante el mes</string>
+    <string name="ultsem">(última semana)</string>
+
+    <string name="hoy">Ventas hoy</string>
+    <string name="mes">Ventas esta semana</string>
+
+    <string name="home">Inicio</string>
+    <string name="asis">Asistente</string>
+    <string name="invent">Inventario</string>
+    <string name="perf">Perfil</string>
+
+    <!-- Pantalla pedidos -->
+    <string name="nuevo">Nuevos</string>
+    <string name="progres">En progreso</string>
+    <string name="soli">Solicitó un pedido. </string>
+
+    <!-- Pantalla infopedidos -->
+    <string name="detalle">Detalles del pedido</string>
+    <string name="confirm">Confirmar pedido</string>
+    <string name="decline">Rechazar pedido</string>
+    <string name="pediListo">¡Pedido listo!</string>
+    <string name="total">Total:</string>
+
+    <string name="entendido">¡Entendido!</string>
+
+    <!-- Pantalla infopedidos confirmado-->
+    <string name="confirmado">Pedido confirmado</string>
+    <string name="mensjconfirm">Haz confirmado el pedido de</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

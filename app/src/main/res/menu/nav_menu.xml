@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/homeicon"
+        android:title="@string/home"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/asistent"
+        android:icon="@drawable/asistenticon"
+        android:title="@string/asis" />
+    app:showAsAction="withText" />
+    <item
+        android:id="@+id/invent"
+        android:icon="@drawable/inventicon"
+        android:title="@string/invent" />
+    app:showAsAction="withText" />
+    <item
+        android:id="@+id/perfil"
+        android:icon="@drawable/perfilicon"
+        android:title="@string/perf" />
+    app:showAsAction="withText" />
+</menu>
