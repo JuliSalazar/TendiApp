@@ -41,9 +41,10 @@ public class RegistroTendero extends AppCompatActivity {
         continueBTN.setOnClickListener(
                 (v)->{
                     Intent i = new Intent(this, RegistroTendero2.class);
-                    Tendero tend = new Tendero(UUID.randomUUID().toString(), nameEDT.getText().toString()+lastnameEDT.getText().toString(), celEDT.getText().toString());
-                    i.putExtra("tend", (Parcelable) tend);
-                    startActivityForResult(i, CODE);
+                   // Tendero tend = new Tendero(UUID.randomUUID().toString(), nameEDT.getText().toString()+lastnameEDT.getText().toString(), celEDT.getText().toString());
+                    //i.putExtra("tend", (Parcelable) tend);
+                    //startActivityForResult(i, CODE);
+                    startActivity(i);
                 }
         );
 

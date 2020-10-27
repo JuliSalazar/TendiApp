@@ -51,8 +51,8 @@
         app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backBTN"
-        app:srcCompat="@drawable/tendinstrucion1"
-        tools:srcCompat="@drawable/tendinstrucion1" />
+        app:srcCompat="@drawable/datopj"
+        tools:srcCompat="@drawable/datopj" />
 
     <TextView
         android:id="@+id/textView2"
@@ -155,15 +155,5 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="205dp" />
-
-    <EditText
-        android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/celEDT" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

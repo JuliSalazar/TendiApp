@@ -57,10 +57,11 @@
 
     <!-- Pantalla infopedidos -->
     <string name="detalle">Detalles del pedido</string>
+    <string name="pedi">Pedido de</string>
     <string name="confirm">Confirmar pedido</string>
     <string name="decline">Rechazar pedido</string>
     <string name="pediListo">¡Pedido listo!</string>
-    <string name="total">Total:</string>
+    <string name="total">Total a pagar:</string>
 
     <string name="entendido">¡Entendido!</string>
 

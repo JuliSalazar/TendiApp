@@ -39,9 +39,8 @@ public class RegistroTendero2 extends AppCompatActivity {
         finalizarBTN.setOnClickListener(
                 (v)->{
                     Intent i = new Intent(this, HomeActivity.class);
-                    Intent data = new Intent();
-
-                    setResult(RESULT_OK, data);
+                    //Intent data = new Intent();
+                    //setResult(RESULT_OK, data);
                     startActivity(i);
                 }
         );

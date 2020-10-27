@@ -9,7 +9,7 @@
     <!-- TODO: Update blank fragment layout -->
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/detalleBTN"
         android:layout_width="382dp"
         android:layout_height="110dp"
         android:layout_marginTop="4dp"
@@ -18,7 +18,7 @@
         app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView30"
-        app:srcCompat="@android:drawable/btn_star"
+        app:srcCompat="@drawable/newbuton"
         tools:srcCompat="@drawable/newbuton" />
 
     <View
@@ -67,7 +67,7 @@
         tools:text="@string/ped" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/backBTNP"
         android:layout_width="30dp"
         android:layout_height="24dp"
         android:backgroundTint="#00FFFFFF"
@@ -103,24 +103,23 @@
         android:fontFamily="@font/poppins_bold"
         android:text="@string/nuevo"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="@+id/backBTNP"
+        app:layout_constraintTop_toBottomOf="@+id/backBTNP"
         tools:text="@string/nuevo" />
 
     <TextView
         android:id="@+id/nameTV"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="22dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="TextView"
         android:textAlignment="textStart"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton5"
-        app:layout_constraintHorizontal_bias="0.301"
-        app:layout_constraintStart_toStartOf="@+id/imageButton5"
-        app:layout_constraintTop_toTopOf="@+id/imageButton5"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintBottom_toBottomOf="@+id/detalleBTN"
+        app:layout_constraintEnd_toStartOf="@+id/arrowWhiteBTN"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView30"
+        app:layout_constraintTop_toTopOf="@+id/detalleBTN"
+        app:layout_constraintVertical_bias="0.255" />
 
     <TextView
         android:id="@+id/textView33"
@@ -141,24 +140,22 @@
         android:layout_width="71dp"
         android:layout_height="19dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="$"
         android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="@+id/textView32"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView33"
-        app:layout_constraintTop_toBottomOf="@+id/textView32"
-        tools:text="$" />
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
     <TextView
         android:id="@+id/textView32"
-        android:layout_width="131dp"
+        android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:fontFamily="@font/poppins_regular"
         android:text="@string/soli"
         android:textAlignment="textStart"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+        app:layout_constraintBottom_toBottomOf="@+id/detalleBTN"
         app:layout_constraintEnd_toEndOf="@+id/nameTV"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/nameTV"
@@ -167,16 +164,30 @@
         tools:text="@string/soli" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/arrowWhiteBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#00FFFFFF"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton5"
+        app:layout_constraintBottom_toBottomOf="@+id/detalleBTN"
+        app:layout_constraintEnd_toEndOf="@+id/detalleBTN"
         app:layout_constraintHorizontal_bias="0.891"
-        app:layout_constraintStart_toStartOf="@+id/imageButton5"
-        app:layout_constraintTop_toTopOf="@+id/imageButton5"
+        app:layout_constraintStart_toStartOf="@+id/detalleBTN"
+        app:layout_constraintTop_toTopOf="@+id/detalleBTN"
         app:layout_constraintVertical_bias="0.52"
-        app:srcCompat="@drawable/whitearrow" />
+        app:srcCompat="@drawable/whitearrow"
+        tools:srcCompat="@drawable/whitearrow" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragConta"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3"
+        app:layout_constraintVertical_bias="1.0">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
