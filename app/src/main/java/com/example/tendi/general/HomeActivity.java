@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.ImageButton;
 
 import com.example.tendi.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,6 +20,9 @@ public class HomeActivity extends AppCompatActivity {
     private PerfilFragment perfilFragment;
     private BottomNavigationView navBar;
 
+    private ImageButton pedidosBTN;
+    private PedidosFragment pedidosFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,11 +30,26 @@ public class HomeActivity extends AppCompatActivity {
 
         navBar = findViewById(R.id.navBar);
 
+        pedidosBTN = findViewById(R.id.pedidosBTN);
+
         homeFragment = HomeFragment.newInstance();
         asistenteFragment = AsistenteFragment.newInstance();
         inventarioFragment = InventarioFragment.newInstance();
         perfilFragment = PerfilFragment.newInstance();
-        showFragment(homeFragment);
+
+        pedidosFragment = PedidosFragment.newInstance();
+        showFragment(asistenteFragment);
+
+        if(pedidosBTN != null){
+
+            pedidosBTN.setOnClickListener(
+                    (v)->{
+                        Log.e("desdeActivity","HOLA");
+                       // showFragment(pedidosFragment);
+                    }
+            );
+        }
+
 
         navBar.setOnNavigationItemSelectedListener(
                 (menuItem) ->{

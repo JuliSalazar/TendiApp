@@ -10,11 +10,20 @@ import android.widget.ImageButton;
 import com.example.tendi.general.AsistenteFragment;
 import com.example.tendi.R;
 import com.example.tendi.general.HomeActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegistroTendero2 extends AppCompatActivity {
 
     private ImageButton backBTN;
     private Button finalizarBTN;
+
+    //FirebaseDatabase database = FirebaseDatabase.getInstance();
+    //DatabaseReference myRef = database.getReference("message");
+
+    private FirebaseAuth mAuth;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +33,15 @@ public class RegistroTendero2 extends AppCompatActivity {
         backBTN = findViewById(R.id.backBTN);
         finalizarBTN = findViewById(R.id.finalizarBTN);
 
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+
         finalizarBTN.setOnClickListener(
                 (v)->{
                     Intent i = new Intent(this, HomeActivity.class);
+                    Intent data = new Intent();
+
+                    setResult(RESULT_OK, data);
                     startActivity(i);
                 }
         );

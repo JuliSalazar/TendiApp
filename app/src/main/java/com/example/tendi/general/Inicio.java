@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.tendi.R;
+import com.example.tendi.util.Constants;
+import com.example.tendi.util.HTTPSWebUtilDomi;
+import com.google.gson.Gson;
 
 public class Inicio extends AppCompatActivity {
 
@@ -48,11 +51,13 @@ public class Inicio extends AppCompatActivity {
 
         iniciarBTN.setOnClickListener(
                (v)->{
+                   /*Gson gson = new Gson();
                    String tenderCel = celuET.getText().toString();
                    String tenderContra = contraET.getText().toString();
-
-                  // Intent i = new Intent(this, Registro1.class);
-                  // startActivity(i);
+                   HTTPSWebUtilDomi https = new HTTPSWebUtilDomi();
+                  // https.GETrequest(Constants.BASEURL+ "Tenderos/");*/
+                   Intent i = new Intent(this, HomeActivity.class);
+                   startActivity(i);
                }
         );
 

@@ -42,6 +42,10 @@
         <item name="android:shadowColor">#888888</item>
     </style>
 
+    <style name="viewStyle" parent="Theme.MaterialComponents">
+        <item name="android:background">@drawable/viewstyle</item>
+    </style>
+
 
 
     <style name="EditText" parent="Widget.AppCompat.EditText">

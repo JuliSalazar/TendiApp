@@ -1,18 +1,25 @@
 package com.example.tendi.general;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.tendi.R;
 
 
-public class AsistenteFragment extends Fragment {
-    
+public class AsistenteFragment extends Fragment implements View.OnClickListener{
+
+    private ImageButton pedidosBTN;
+    private PedidosFragment pedidosFragment;
     //State
 
 
@@ -30,7 +37,37 @@ public class AsistenteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.fragment_asistente, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_asistente, container, false);
+        pedidosBTN = root.findViewById(R.id.pedidosBTN);
+        pedidosBTN.setOnClickListener(this);
+
+
+        return root;
+    }
+
+    public ImageButton getPedidosBTN() {
+        return pedidosBTN;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.pedidosBTN:
+                Intent intent = new Intent(getActivity(),Pedidos.class);
+                startActivity(intent);
+                /* Crear fragmento de tu clase
+                Fragment fragment = new PedidosFragment();
+                // Obtener el administrador de fragmentos a través de la actividad
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                // Definir una transacción
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                // Remplazar el contenido principal por el fragmento
+                fragmentTransaction.replace(R.id.fragmentContainer, fragment);
+                fragmentTransaction.addToBackStack(null);
+                // Cambiar
+                fragmentTransaction.commit();*/
+                break;
+        }
     }
 }
