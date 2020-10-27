@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1070863651444",
+    "firebase_url": "https://tendidb-d6999.firebaseio.com",
+    "project_id": "tendidb-d6999",
+    "storage_bucket": "tendidb-d6999.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070863651444:android:135304ad0add839bf27721",
+        "android_client_info": {
+          "package_name": "com.example.tendi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070863651444-m2gq8rrd4mqed5ckl4l4kbbm5l5v32t3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCaar08VZZklbpvWTnd42FhDlUPvnNYkMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070863651444-m2gq8rrd4mqed5ckl4l4kbbm5l5v32t3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
