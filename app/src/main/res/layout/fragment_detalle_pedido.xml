@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".general.DetallePedidoFragment">
+    tools:context=".generalTende.DetallePedidoFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -90,6 +90,85 @@
             tools:text="@string/pedi" />
 
         <TextView
+            android:id="@+id/pedidoFromTV6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Precio:"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toBottomOf="@+id/productTV"
+            tools:text="Precio:" />
+
+        <TextView
+            android:id="@+id/priceInfoTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pedidoFromTV6"
+            app:layout_constraintTop_toBottomOf="@+id/productTV" />
+
+        <TextView
+            android:id="@+id/totalprice2TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pedidoFromTV10"
+            app:layout_constraintTop_toBottomOf="@+id/productTV" />
+
+        <TextView
+            android:id="@+id/pedidoFromTV7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Cantidad:"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toBottomOf="@+id/pedidoFromTV6"
+            tools:text="Cantidad:" />
+
+        <TextView
+            android:id="@+id/pedidoFromTV8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="1"
+            android:textColor="@color/colorOrange"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/pedidoFromTV7"
+            app:layout_constraintTop_toBottomOf="@+id/pedidoFromTV6"
+            tools:text="1" />
+
+        <TextView
+            android:id="@+id/pedidoFromTV10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="$"
+            android:textColor="@color/colorOrange"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/view6"
+            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintStart_toEndOf="@+id/pedidoFromTV6"
+            app:layout_constraintTop_toTopOf="@+id/pedidoFromTV6"
+            tools:text="$" />
+
+        <TextView
             android:id="@+id/pedidoFromTV3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -117,6 +196,19 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/imageView15"
             app:layout_constraintTop_toBottomOf="@+id/pedidoFromTV3"
+            tools:text="@string/total" />
+
+        <TextView
+            android:id="@+id/productTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView17"
+            app:layout_constraintTop_toTopOf="@+id/imageView17"
             tools:text="@string/total" />
 
         <TextView
@@ -163,7 +255,7 @@
             tools:text="@string/decline" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/confirmBTN"
             style="@style/MainButton"
             android:layout_width="156dp"
             android:layout_height="wrap_content"
@@ -174,6 +266,16 @@
             app:layout_constraintStart_toEndOf="@+id/button"
             app:layout_constraintTop_toTopOf="@+id/button"
             tools:text="@string/confirm" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/galletas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

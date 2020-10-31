@@ -1,4 +1,4 @@
-package com.example.tendi.general;
+package com.example.tendi.generalTende;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +14,6 @@ import android.app.NotificationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.ImageButton;
 import android.widget.RemoteViews;
 
 import com.example.tendi.R;
@@ -43,7 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        navBar = findViewById(R.id.navBar);
+        navBar = findViewById(R.id.navBarU);
 
 
         homeFragment = HomeFragment.newInstance();
@@ -84,17 +83,17 @@ public class HomeActivity extends AppCompatActivity {
         navBar.setOnNavigationItemSelectedListener(
                 (menuItem) ->{
                     switch (menuItem.getItemId()){
-                        case R.id.home:
+                        case R.id.homeU:
                             showFragment(homeFragment);
                             break;
-                        case R.id.asistent:
+                        case R.id.pedidosU:
                             showFragment(asistenteFragment);
                             break;
                         case R.id.invent:
                             showFragment(inventarioFragment);
                             break;
 
-                        case R.id.perfil:
+                        case R.id.perfilU:
                             showFragment(perfilFragment);
                             break;
 
@@ -110,7 +109,7 @@ public class HomeActivity extends AppCompatActivity {
     public void showFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.fragmentContainer,fragment);
+        transaction.replace(R.id.fragmentContainerU,fragment);
         transaction.commit();
     }
 

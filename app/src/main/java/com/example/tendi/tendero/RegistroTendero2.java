@@ -7,9 +7,8 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.example.tendi.general.AsistenteFragment;
 import com.example.tendi.R;
-import com.example.tendi.general.HomeActivity;
+import com.example.tendi.generalTende.HomeActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;

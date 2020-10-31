@@ -38,6 +38,11 @@
         <item name="android:layout_width">267dp</item>
         <item name="android:layout_height">45dp</item>
     </style>
+
+    <style name="viewButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/viewproductbutton</item>
+        <item name="android:shadowColor">#888888</item>
+    </style>
     <style name="loginRect" parent="Theme.MaterialComponents">
         <item name="android:background">@drawable/loginrect</item>
     </style>

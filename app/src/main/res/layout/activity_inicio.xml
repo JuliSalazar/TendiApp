@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorOrange"
     android:backgroundTint="@color/colorOrange"
-    tools:context=".general.Inicio">
+    tools:context=".generalTende.Inicio">
 
     <ImageView
         android:id="@+id/imageView4"

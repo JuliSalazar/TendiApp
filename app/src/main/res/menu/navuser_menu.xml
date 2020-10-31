@@ -9,17 +9,11 @@
         app:showAsAction="withText" />
     <item
         android:id="@+id/pedidosU"
-        android:icon="@drawable/asistenticon"
-        android:title="@string/asis" />
-    app:showAsAction="withText" />
-    <item
-        android:id="@+id/invent"
-        android:icon="@drawable/inventicon"
-        android:title="@string/invent" />
-    app:showAsAction="withText" />
+        android:icon="@drawable/pedidosicon"
+        android:title="@string/ped" />
     <item
         android:id="@+id/perfilU"
         android:icon="@drawable/perfilicon"
         android:title="@string/perf" />
-    app:showAsAction="withText" />
+        app:showAsAction="withText" />
 </menu>

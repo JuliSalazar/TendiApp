@@ -57,7 +57,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="115dp"
-        android:layout_height="39dp"
+        android:layout_height="42dp"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/instru"
         android:textAlignment="center"

@@ -1,7 +1,6 @@
 package com.example.tendi.util;
 
-import com.example.tendi.general.AsistenteFragment;
-import com.example.tendi.general.Pedidos;
+import com.example.tendi.generalTende.AsistenteFragment;
 import com.example.tendi.model.Pedido;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

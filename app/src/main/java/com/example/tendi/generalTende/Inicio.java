@@ -1,4 +1,4 @@
-package com.example.tendi.general;
+package com.example.tendi.generalTende;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,9 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.tendi.R;
-import com.example.tendi.util.Constants;
-import com.example.tendi.util.HTTPSWebUtilDomi;
-import com.google.gson.Gson;
 
 public class Inicio extends AppCompatActivity {
 

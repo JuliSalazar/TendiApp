@@ -1,4 +1,4 @@
-package com.example.tendi.general;
+package com.example.tendi.generalTende;
 
 import android.os.Bundle;
 

@@ -1,4 +1,4 @@
-package com.example.tendi.general;
+package com.example.tendi.generalUser;
 
 import android.os.Bundle;
 
@@ -11,17 +11,16 @@ import android.view.ViewGroup;
 import com.example.tendi.R;
 
 
-public class InventarioFragment extends Fragment {
+public class PerfilUserFragment extends Fragment {
 
 
-    public InventarioFragment() {
+    public PerfilUserFragment() {
         // Required empty public constructor
     }
 
-    public static InventarioFragment newInstance() {
-        InventarioFragment fragment = new InventarioFragment();
+    public static PerfilUserFragment newInstance() {
+        PerfilUserFragment fragment = new PerfilUserFragment();
         Bundle args = new Bundle();
-
         fragment.setArguments(args);
         return fragment;
     }
@@ -31,6 +30,6 @@ public class InventarioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inventario, container, false);
+        return inflater.inflate(R.layout.fragment_perfil_user, container, false);
     }
 }

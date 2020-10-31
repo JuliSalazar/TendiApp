@@ -1,4 +1,4 @@
-package com.example.tendi.general;
+package com.example.tendi.generalTende;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.tendi.R;
+import com.example.tendi.generalUser.UserMainActivity;
 import com.example.tendi.tendero.RegistroTendero;
 
 public class Registro1 extends AppCompatActivity {
@@ -42,8 +43,8 @@ public class Registro1 extends AppCompatActivity {
         );
         userBTN.setOnClickListener(
                 (v)->{
-                    // Intent i = new Intent(this, RegistroUsuario.class);
-                    // startActivity(i);
+                     Intent i = new Intent(this, UserMainActivity.class);
+                     startActivity(i);
                 }
         );
 
