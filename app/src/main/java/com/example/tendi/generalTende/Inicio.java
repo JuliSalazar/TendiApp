@@ -5,11 +5,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.tendi.R;
+import com.example.tendi.model.Tendero;
+import com.example.tendi.util.Constants;
+import com.example.tendi.util.HTTPSWebUtilDomi;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.HashMap;
 
 public class Inicio extends AppCompatActivity {
 
@@ -25,7 +35,7 @@ public class Inicio extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-
+    
         //Referenciar para cambiar colores de textview
 
         registrarText = findViewById(R.id.registrarTV);
@@ -48,13 +58,28 @@ public class Inicio extends AppCompatActivity {
 
         iniciarBTN.setOnClickListener(
                (v)->{
-                   /*Gson gson = new Gson();
+                   Gson gson = new Gson();
                    String tenderCel = celuET.getText().toString();
                    String tenderContra = contraET.getText().toString();
-                   HTTPSWebUtilDomi https = new HTTPSWebUtilDomi();
-                  // https.GETrequest(Constants.BASEURL+ "Tenderos/");*/
-                   Intent i = new Intent(this, HomeActivity.class);
-                   startActivity(i);
+                   if(tenderCel.equals("")){
+                       Toast.makeText(this,"Ingresa un número de celular",Toast.LENGTH_LONG);
+                       Log.e("CONSOLA", "ESTÁ VACÍO");
+                   }else{
+                       HTTPSWebUtilDomi https = new HTTPSWebUtilDomi();
+                       new Thread(
+                               ()->{
+                                   String resp = https.GETrequest(Constants.BASEURL+ "Tenderos/"+ tenderCel + ".json");
+                                   //Type tipo = new TypeToken<HashMap<String, Tendero>>(){}.getType();
+                                   if(resp.equals("null")){
+                                       Log.e("CONSOLA", "No existe"+resp);
+                                   }else {
+                                       Log.e("CONSOLA", "Entré?");
+                                   }
+                               }
+                       ).start();
+                   }
+                   //Intent i = new Intent(this, HomeActivity.class);
+                   //startActivity(i);
                }
         );
 

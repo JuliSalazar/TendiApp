@@ -1,9 +1,12 @@
 package com.example.tendi.model;
 
-public class Tendero {
+import java.io.Serializable;
+
+public class Tendero implements Serializable {
     private String id;
     private String name;
     private String celular;
+    private String contra;
     private Negocio negocio;
 
     public Tendero() {
@@ -13,6 +16,7 @@ public class Tendero {
         this.id = id;
         this.name = name;
         this.celular = celular;
+        this.contra = contra;
         this.negocio = negocio;
     }
 
