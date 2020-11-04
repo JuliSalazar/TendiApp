@@ -32,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
     private PerfilFragment perfilFragment;
     private BottomNavigationView navBar;
 
-    private DatabaseReference ref =  Constants.refDB.child("Tenderos").child("1234").child("Pedidos");
+    private DatabaseReference ref =  Constants.refDB.child("Tenderos");
 
 
 
@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                notfication(dataSnapshot.child("Name").getValue().toString());
+                //notfication(dataSnapshot.child("Name").getValue().toString());
 
             }
 

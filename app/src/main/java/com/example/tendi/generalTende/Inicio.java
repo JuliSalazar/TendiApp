@@ -13,9 +13,12 @@ import android.widget.Toast;
 
 import com.example.tendi.R;
 import com.example.tendi.model.Tendero;
+import com.example.tendi.usuario.Usuario;
 import com.example.tendi.util.Constants;
 import com.example.tendi.util.HTTPSWebUtilDomi;
+import com.google.firebase.database.DatabaseReference;
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -58,28 +61,61 @@ public class Inicio extends AppCompatActivity {
 
         iniciarBTN.setOnClickListener(
                (v)->{
+                   String edtCel = celuET.getText().toString();
+                   String edtContra = contraET.getText().toString();
+                   //Si el usuario no pone nada en los EDT entonces aparece el mensaje de error
                    Gson gson = new Gson();
-                   String tenderCel = celuET.getText().toString();
-                   String tenderContra = contraET.getText().toString();
-                   if(tenderCel.equals("")){
-                       Toast.makeText(this,"Ingresa un número de celular",Toast.LENGTH_LONG);
-                       Log.e("CONSOLA", "ESTÁ VACÍO");
+                   if(edtCel.equals("")){
+                       celuET.setHint("Ingresa un número de celular");
+                       celuET.setHintTextColor(getResources().getColor(R.color.colorError));
+                       if (edtContra.equals("")){
+                           contraET.setHint("Ingresa tu contraseña");
+                           contraET.setHintTextColor(getResources().getColor(R.color.colorError));
+                       }
                    }else{
                        HTTPSWebUtilDomi https = new HTTPSWebUtilDomi();
                        new Thread(
                                ()->{
-                                   String resp = https.GETrequest(Constants.BASEURL+ "Tenderos/"+ tenderCel + ".json");
-                                   //Type tipo = new TypeToken<HashMap<String, Tendero>>(){}.getType();
-                                   if(resp.equals("null")){
-                                       Log.e("CONSOLA", "No existe"+resp);
-                                   }else {
-                                       Log.e("CONSOLA", "Entré?");
-                                   }
+                                   //Aqui se hace la autenticacion del numero del cel y la contraseña
+                                   String respTend = https.GETrequest(Constants.BASEURL+ "Tenderos/"+ edtCel + ".json");
+                                   //Si no esta en la rama de tenderos, miro la de usuarios
+                                   if(respTend.equals("null")){
+                                       String respUser = https.GETrequest(Constants.BASEURL+ "Usuarios/"+ edtCel + ".json");
+                                       // si no esta en la rama de usuarios no existe
+                                       if(respUser.equals("null")) {
+                                           runOnUiThread(
+                                                   () -> {
+                                                       celuET.setText("");
+                                                       contraET.setText("");
+                                                       celuET.setHint("No existe el usuario");
+                                                       celuET.setHintTextColor(getResources().getColor(R.color.colorError));
+                                                   }
+                                           );
+
+                                       }else{//si existe en usuarios, creo el usuario para autenticar
+                                           Log.e("CONSOLA", respUser);
+                                           Usuario u = gson.fromJson(respUser, Usuario.class);
+                                           //   t = gson.fromJson(resp, Tendero.class);
+                                       }
+
+                                   }else{ //si existe en tenderos, hago la autenticación y paso de pantalla
+                                       Tendero t = gson.fromJson(respTend, Tendero.class);
+                                       if(t.getContra().equals(edtContra)){
+                                           Intent i = new Intent(this, HomeActivity.class);
+                                           startActivity(i);
+                                       }else {
+                                           runOnUiThread(
+                                                   ()->{
+                                                       contraET.setText("");
+                                                       contraET.setHint("Contraseña incorrecta");
+                                                       contraET.setHintTextColor(getResources().getColor(R.color.colorError));
+                                                   }
+                                           );
+                                       }
+                                   }//termina else tenderos
                                }
                        ).start();
                    }
-                   //Intent i = new Intent(this, HomeActivity.class);
-                   //startActivity(i);
                }
         );
 

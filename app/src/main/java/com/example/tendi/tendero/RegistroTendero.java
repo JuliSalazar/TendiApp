@@ -7,21 +7,18 @@ import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.tendi.R;
 import com.example.tendi.model.Tendero;
 
-import java.io.Serializable;
 import java.util.Calendar;
-import java.util.UUID;
 
 public class RegistroTendero extends AppCompatActivity {
 
@@ -29,7 +26,8 @@ public class RegistroTendero extends AppCompatActivity {
     private Button continueBTN;
 
     private EditText nameEDT;
-    private EditText lastnameEDT;
+    private EditText contraEDT;
+    private EditText confirmContraEDT;
     private EditText celEDT;
     private EditText naciEDT;
     private EditText identiEDT;
@@ -49,7 +47,8 @@ public class RegistroTendero extends AppCompatActivity {
         continueBTN = findViewById(R.id.continueBTN);
 
         nameEDT = findViewById(R.id.nameEDT);
-        lastnameEDT = findViewById(R.id.lastnameEDT);
+        contraEDT = findViewById(R.id.contraEDT);
+        confirmContraEDT = findViewById(R.id.confirmContraEDT);
         celEDT = findViewById(R.id.celEDT);
         naciEDT = findViewById(R.id.naciEDT);
         identiEDT = findViewById(R.id.identiEDT);
@@ -72,12 +71,17 @@ public class RegistroTendero extends AppCompatActivity {
         continueBTN.setOnClickListener(
                 (v)->{
                     Intent i = new Intent(this, RegistroTendero2.class);
-
-                    Tendero tend = new Tendero(identiEDT.getText().toString(), nameEDT.getText().toString()+ " "+ lastnameEDT.getText().toString(),
-                            celEDT.getText().toString());
-                    i.putExtra("tend", tend);
-                    startActivityForResult(i, CODE);
-                    //startActivity(i);
+                    if(contraEDT.getText().toString().equals(confirmContraEDT.getText().toString())){
+                        Tendero tend = new Tendero(identiEDT.getText().toString(), nameEDT.getText().toString(),contraEDT.getText().toString(),
+                                celEDT.getText().toString());
+                        i.putExtra("tend", tend);
+                        startActivityForResult(i, CODE);
+                    }else{
+                        contraEDT.setText("");
+                        confirmContraEDT.setText("");
+                        confirmContraEDT.setHint("No coinciden las contraseñas");
+                        confirmContraEDT.setHintTextColor(getResources().getColor(R.color.colorError));
+                    }
                 }
         );
 

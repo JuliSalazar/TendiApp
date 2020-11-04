@@ -34,13 +34,14 @@
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="237dp"
-        android:layout_height="156dp"
+        android:layout_height="165dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/backBTN"
         app:srcCompat="@drawable/datopj"
         tools:srcCompat="@drawable/datopj" />
+
 
     <TextView
         android:id="@+id/textView2"
@@ -54,12 +55,11 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageView7"
         app:layout_constraintEnd_toEndOf="@+id/imageView7"
-        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toTopOf="@+id/imageView7"
-        app:layout_constraintVertical_bias="0.19"
+        app:layout_constraintVertical_bias="0.215"
         tools:text="@string/instru" />
-
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
@@ -75,21 +75,20 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="58dp" />
 
+
     <ScrollView
-        android:layout_width="406dp"
-        android:layout_height="655dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7">
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/textView5"
@@ -98,81 +97,12 @@
                 android:layout_marginStart="55dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/name"
+                android:textSize="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="@string/name" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/lastname"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nameEDT"
-                tools:text="@string/lastname" />
-
-            <TextView
-                android:id="@+id/textView38"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/confirmcontra"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastnameEDT2"
-                tools:text="@string/confirmcontra" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/cel"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/lastnameEDT"
-                tools:text="@string/cel" />
-
-            <TextView
-                android:id="@+id/textView36"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/naci"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/celEDT"
-                tools:text="@string/naci" />
-
-            <TextView
-                android:id="@+id/textView37"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="55dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/identi"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/naciEDT"
-                tools:text="@string/identi" />
 
             <EditText
                 android:id="@+id/nameEDT"
@@ -184,13 +114,29 @@
                 android:ems="10"
                 android:hint="@string/ejname"
                 android:inputType="textPersonName"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/lastname"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameEDT"
+                tools:text="@string/lastname" />
+
             <EditText
-                android:id="@+id/lastnameEDT"
+                android:id="@+id/confirmContraEDT"
                 style="@style/EditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -199,13 +145,29 @@
                 android:ems="10"
                 android:hint="@string/confirmcontrahint"
                 android:inputType="textPassword"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
+            <TextView
+                android:id="@+id/textView38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/confirmcontra"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contraEDT"
+                tools:text="@string/confirmcontra" />
+
             <EditText
-                android:id="@+id/lastnameEDT2"
+                android:id="@+id/contraEDT"
                 style="@style/EditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -214,10 +176,26 @@
                 android:ems="10"
                 android:hint="@string/ejlastname"
                 android:inputType="textPassword"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/cel"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirmContraEDT"
+                tools:text="@string/cel" />
 
             <EditText
                 android:id="@+id/celEDT"
@@ -229,43 +207,55 @@
                 android:ems="10"
                 android:hint="@string/ejCel"
                 android:inputType="textPersonName|phone"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-            <EditText
-                android:id="@+id/identiEDT"
-                style="@style/EditText"
+            <TextView
+                android:id="@+id/textView36"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="55dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/naci"
+                android:textSize="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/celEDT"
+                tools:text="@string/naci" />
+
+            <EditText
+                android:id="@+id/identiEDT"
+                style="@style/EditText"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="4dp"
                 android:ems="10"
                 android:hint="@string/ejidenti"
                 android:inputType="textPersonName|phone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/spin1"
                 app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
-            <EditText
-                android:id="@+id/naciEDT"
-                style="@style/EditText"
+            <TextView
+                android:id="@+id/textView37"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="55dp"
-                android:layout_marginTop="5dp"
-                android:clickable="true"
-                android:ems="10"
-                android:focusable="false"
-                android:hint="@string/ejnaci"
-                android:inputType="date"
-                android:maxLines="1"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/identi"
+                android:textSize="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView36" />
+                app:layout_constraintTop_toBottomOf="@+id/naciEDT"
+                tools:text="@string/identi" />
 
             <Spinner
                 android:id="@+id/spin1"
@@ -277,26 +267,45 @@
                 android:entries="@array/opci"
                 android:popupBackground="@drawable/etstyle"
                 app:layout_constraintBottom_toTopOf="@+id/continueBTN"
-                app:layout_constraintEnd_toStartOf="@+id/identiEDT"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/identiEDT"
                 app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/naciEDT"
+                style="@style/EditText"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="@string/ejnaci"
+                android:inputType="date"
+                android:maxLines="1"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView36" />
 
             <Button
                 android:id="@+id/continueBTN"
                 style="@style/MainButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
                 android:text="@string/cont"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/identiEDT"
                 tools:text="@string/cont" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

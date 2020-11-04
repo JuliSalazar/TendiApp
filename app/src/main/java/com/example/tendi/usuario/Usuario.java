@@ -1,23 +1,23 @@
-package com.example.tendi.model;
+package com.example.tendi.usuario;
+
+import com.example.tendi.model.Negocio;
 
 import java.io.Serializable;
 
-public class Tendero implements Serializable {
+public class Usuario implements Serializable {
     private String id;
     private String name;
     private String celular;
     private String contra;
-    private Negocio negocio;
 
-    public Tendero() {
+    public Usuario() {
     }
 
-    public Tendero(String id, String name, String contra, String celular) {
+    public Usuario(String id, String name, String contra, String celular) {
         this.id = id;
         this.name = name;
         this.celular = celular;
         this.contra = contra;
-        this.negocio = negocio;
     }
 
     public String getContra() {
@@ -50,13 +50,5 @@ public class Tendero implements Serializable {
 
     public void setCelular(String celular) {
         this.celular = celular;
-    }
-
-    public Negocio getNegocio() {
-        return negocio;
-    }
-
-    public void setNegocio(Negocio negocio) {
-        this.negocio = negocio;
     }
 }

@@ -29,11 +29,6 @@ public class RegistroTendero2 extends AppCompatActivity {
     private EditText direcEDT;
     private EditText rutEDT;
 
-    //FirebaseDatabase database = FirebaseDatabase.getInstance();
-    //DatabaseReference myRef = database.getReference("message");
-
-    private FirebaseAuth mAuth;
-    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,8 +45,6 @@ public class RegistroTendero2 extends AppCompatActivity {
         Tendero tend = (Tendero) getIntent().getExtras().getSerializable("tend");
         Log.e("CONSOLA", tend.getName());
 
-        mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         finalizarBTN.setOnClickListener(
                 (v)->{
