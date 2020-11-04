@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".generalUser.UserMainActivity"></activity>
+        <activity android:name=".generalUser.BolsaDeCompra"></activity>
+        <activity android:name=".generalUser.TendActivity" />
+        <activity android:name=".generalUser.UserMainActivity" />
         <activity android:name=".generalTende.Pedidos" />
         <activity android:name=".generalTende.HomeActivity" />
         <activity

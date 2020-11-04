@@ -1,5 +1,7 @@
 package com.example.tendi.generalUser;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,12 +9,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 
 import com.example.tendi.R;
 
 
 public class HomeUserFragment extends Fragment {
 
+    private ImageButton la11Btn;
 
     public HomeUserFragment() {
         // Required empty public constructor
@@ -30,6 +34,16 @@ public class HomeUserFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_user, container, false);
+       View root = inflater.inflate(R.layout.fragment_home_user, container, false);
+        la11Btn = root.findViewById(R.id.la11Btn);
+
+
+        la11Btn.setOnClickListener(
+                (v)->{
+                    Intent i = new Intent(getActivity(), TendActivity.class);
+                    startActivity(i);
+                }
+        );
+        return root;
     }
 }
