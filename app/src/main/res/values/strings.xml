@@ -3,32 +3,39 @@
     <string name="app_name">Tendi</string>
     <string name="hi">¡Hola!</string>
     <string name="msjBienvenida">¡Te damos la bienvenida a Tendi!</string>
-    <string name="cel">Número de celular</string>
-    <string name="ejCel">Ej: 3014731994</string>
-    <string name="password">Contraseña</string>
-    <string name="ejContra">*************</string>
+    <string name="cel">Tu número de celular</string>
+    <string name="ejCel">Número de celular</string>
+    <string name="password">Tu contraseña</string>
+    <string name="ejContra">Contraseña</string>
     <string name="iniciar">Iniciar sesión</string>
 
     <!-- Pantalla registro -->
     <string name="title">¿Primera vez en tendi?</string>
-    <string name="textRegistro">Sigue las instrucciones para hacer parte de la familia Tendi, ¡no te tomará más de un minuto!</string>
+    <string name="textRegistro">¿Eres un tendero o eres un comprador?\n
+        <b>¡Selecciona una opción!</b></string>
     <string name="tender">Soy un tendero</string>
-    <string name="user">Soy un usuario</string>
+    <string name="user">Soy un comprador</string>
 
     <!-- Pantalla datosTendero -->
-    <string name="instru">Rellena tus datos</string>
-    <string name="name">Nombre</string>
-    <string name="ejname">Ej: Juan Carlos</string>
-    <string name="lastname">Apellido</string>
-    <string name="ejlastname">Ej: Rodriguez</string>
+    <string name="instru">¡Indicanos quién eres!</string>
+    <string name="name">Tu nombre completo</string>
+    <string name="ejname">Nombre completo</string>
+    <string name="lastname">Tu contraseña</string>
+    <string name="ejlastname">Contraseña</string>
+    <string name="confirmcontra">Confirma tu contraseña</string>
+    <string name="confirmcontrahint">Confirma la contraseña</string>
+    <string name="naci">Tu fecha de nacimiento</string>
+    <string name="ejnaci">Ej: DD/MM/AA</string>
+    <string name="identi">Tu identificación</string>
+    <string name="ejidenti">Ej: 1.005.890.654</string>
     <string name="cont">Continuar</string>
 
     <!-- Pantalla datosTienda -->
-    <string name="instruT">Rellena los datos de tu negocio</string>
+    <string name="instruT">¡Ahora la información de tu tienda!</string>
     <string name="nameT">Nombre de la tienda</string>
-    <string name="ejnameT">Ej: Tienda Mela</string>
+    <string name="ejnameT">Nombre de la tienda</string>
     <string name="direction">Dirección de la tienda</string>
-    <string name="ejdirect">Ej: Cra 8 # 8B- 36</string>
+    <string name="ejdirect">Dirección de la tienda</string>
     <string name="rut">R.U.T</string>
 
     <string name="finalizar">¡Crea una cuenta!</string>
