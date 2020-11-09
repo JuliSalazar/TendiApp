@@ -77,6 +77,12 @@
     <string name="mensjconfirm">Haz confirmado el pedido de</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="finanzasTittle">Estadísticas de ganancias</string>
+    <string name="mensuales">Mensuales</string>
+    <string name="semanales">Semanales</string>
+    <string name="infoProductos">Info. Productos</string>
+    <string name="metas">Metas</string>
+    <string name="addMeta">Agregar meta</string>
 
 
 </resources>

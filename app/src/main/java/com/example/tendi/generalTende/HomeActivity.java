@@ -34,9 +34,6 @@ public class HomeActivity extends AppCompatActivity {
 
     private DatabaseReference ref =  Constants.refDB.child("Tenderos");
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

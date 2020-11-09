@@ -50,6 +50,12 @@
     <style name="bgasistent" parent="Theme.MaterialComponents">
         <item name="android:background">@drawable/bgasistente</item>
     </style>
+    <style name="bgfinanzas" parent="Theme.MaterialComponents">
+        <item name="android:background">@drawable/bgfinanzas</item>
+    </style>
+    <style name="bgbeneficios" parent="Theme.MaterialComponents">
+        <item name="android:background">@drawable/bgbeneficios</item>
+    </style>
     <style name="bgLY" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/bglinearly</item>
         <item name="android:textColor">@color/colorWhite</item>

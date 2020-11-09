@@ -1,23 +1,32 @@
 package com.example.tendi.generalTende;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
+import android.transition.Transition;
+import android.util.Log;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.tendi.R;
 
 
-public class AsistenteFragment extends Fragment implements View.OnClickListener{
+public class AsistenteFragment extends Fragment{
 
-    private ImageButton pedidosBTN;
+    private int progress;
     private PedidosFragment pedidosFragment;
-    //State
+    private ConstraintLayout constraintLayoutVentas;
 
 
     public AsistenteFragment() {
@@ -34,37 +43,69 @@ public class AsistenteFragment extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View root = inflater.inflate(R.layout.fragment_asistente, container, false);
         // Inflate the layout for this fragment
-        pedidosBTN = root.findViewById(R.id.pedidosBTN);
-        pedidosBTN.setOnClickListener(this);
 
+        ImageButton pedidosBTN = root.findViewById(R.id.pedidosBTN);
+        Button ventasBtn = root.findViewById(R.id.ventasBtn);
+        Button finanzasBtn = root.findViewById(R.id.finanzasBtn);
+        Button beneficiosBtn = root.findViewById(R.id.beneficiosBtn);
+
+        Button ventasBtnClickable = root.findViewById(R.id.ventasBtnClickable);
+        Button finanzasBtnClickable = root.findViewById(R.id.finanzasBtnClickable);
+        Button beneficiosBtnClickable = root.findViewById(R.id.beneficiosBtnClickable);
+
+        LinearLayout progressBarValue = root.findViewById(R.id.progressBarValue);
+        TextView progresText = root.findViewById(R.id.progressValueTV);
+        progress = 10;
+        progresText.setText(progress+" %");
+        //progressBarValue.setLayoutParams(new LinearLayout.LayoutParams(40,progress));
+
+        pedidosBTN.setOnClickListener(
+                (v) -> {
+                    Intent intent = new Intent(getActivity(),Pedidos.class);
+                    startActivity(intent);
+                }
+        );
+
+        ventasBtnClickable.setOnClickListener(
+                (v) -> {
+                    ventasBtn.setVisibility(View.VISIBLE);
+                    finanzasBtn.setVisibility(View.INVISIBLE);
+                    beneficiosBtn.setVisibility(View.INVISIBLE);
+                    ventasBtn.performClick();
+                    ventasBtnClickable.setClickable(false);
+                    finanzasBtnClickable.setClickable(true);
+                    beneficiosBtnClickable.setClickable(true);
+                }
+        );
+
+        finanzasBtnClickable.setOnClickListener(
+                (v) -> {
+                    ventasBtn.setVisibility(View.INVISIBLE);
+                    finanzasBtn.setVisibility(View.VISIBLE);
+                    beneficiosBtn.setVisibility(View.INVISIBLE);
+                    finanzasBtn.performClick();
+                    ventasBtnClickable.setClickable(true);
+                    finanzasBtnClickable.setClickable(false);
+                    beneficiosBtnClickable.setClickable(true);
+                }
+        );
+
+        beneficiosBtnClickable.setOnClickListener(
+                (v) -> {
+                    ventasBtn.setVisibility(View.INVISIBLE);
+                    finanzasBtn.setVisibility(View.INVISIBLE);
+                    beneficiosBtn.setVisibility(View.VISIBLE);
+                    beneficiosBtn.performClick();
+                    ventasBtnClickable.setClickable(true);
+                    finanzasBtnClickable.setClickable(true);
+                    beneficiosBtnClickable.setClickable(false);
+                }
+        );
 
         return root;
     }
 
-    public ImageButton getPedidosBTN() {
-        return pedidosBTN;
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.pedidosBTN:
-                Intent intent = new Intent(getActivity(),Pedidos.class);
-                startActivity(intent);
-                /* Crear fragmento de tu clase
-                Fragment fragment = new PedidosFragment();
-                // Obtener el administrador de fragmentos a través de la actividad
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                // Definir una transacción
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                // Remplazar el contenido principal por el fragmento
-                fragmentTransaction.replace(R.id.fragmentContainer, fragment);
-                fragmentTransaction.addToBackStack(null);
-                // Cambiar
-                fragmentTransaction.commit();*/
-                break;
-        }
-    }
 }
