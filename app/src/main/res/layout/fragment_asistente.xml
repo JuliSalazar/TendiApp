@@ -7,23 +7,23 @@
 
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/constraintLayoutContainer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layoutDescription="@xml/fragment_asistente_xml_constraintlayoutcontainer_scene"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline9"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:id="@+id/linear"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/bglinearly"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayoutVentas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -136,15 +136,18 @@
             android:id="@+id/constraintLayoutVentas"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="20dp"
             android:translationX="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear"
+            app:layout_constraintVertical_bias="0.0">
 
             <View
                 android:id="@+id/view5"
-                android:layout_width="wrap_content"
-                android:layout_height="470dp"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:theme="@style/bgasistent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -430,13 +433,14 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayoutFinanzas"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
-            android:translationX="420dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:translationX="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintTop_toBottomOf="@+id/linear"
+            app:layout_constraintVertical_bias="0.0">
 
             <View
                 android:id="@+id/view7"
@@ -591,7 +595,7 @@
             android:id="@+id/constraintLayoutBeneficios"
             android:layout_width="match_parent"
             android:layout_height="470dp"
-            android:translationX="0dp"
+            android:translationX="840dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -663,36 +667,33 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="10%"
                 android:textColor="@color/colorWhite"
                 android:textSize="12sp"
-                app:layout_constraintBottom_toTopOf="@+id/progressBarBG"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:id="@+id/progressBarBG"
                 android:layout_width="40dp"
                 android:layout_height="390dp"
                 android:layout_marginStart="40dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/bglinearly"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressValueTV"></LinearLayout>
 
             <LinearLayout
                 android:id="@+id/progressBarValue"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="40dp"
-                android:layout_marginBottom="30dp"
                 android:background="@drawable/progressbarbg"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/progressBarBG"
                 app:layout_constraintStart_toStartOf="parent"></LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>

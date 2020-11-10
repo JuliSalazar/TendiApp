@@ -7,7 +7,7 @@
         android:id="@+id/transitionVenFin"
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="150">
+        motion:duration="300">
        <KeyFrameSet>
        </KeyFrameSet>
         <OnSwipe motion:dragDirection="dragLeft" />
@@ -19,31 +19,35 @@
             android:id="@+id/constraintLayoutVentas"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="0dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintVertical_bias="1.0" />
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            android:layout_marginTop="20dp" />
         <Constraint
             android:id="@+id/constraintLayoutFinanzas"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="420dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintVertical_bias="1.0" />
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            android:layout_marginTop="20dp" />
         <Constraint
             android:id="@+id/constraintLayoutBeneficios"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="840dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintVertical_bias="1.0" />
+            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            android:layout_marginTop="20dp" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -51,26 +55,35 @@
             android:id="@+id/constraintLayoutVentas"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="-420dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintVertical_bias="0.0" />
         <Constraint
             android:id="@+id/constraintLayoutFinanzas"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="0dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginTop="20dp" />
         <Constraint
             android:id="@+id/constraintLayoutBeneficios"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="420dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintVertical_bias="0.0" />
         <Constraint
             android:id="@+id/ventasBtn"
             android:layout_width="wrap_content"
@@ -91,26 +104,35 @@
             android:id="@+id/constraintLayoutVentas"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="-840dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintVertical_bias="0.0" />
         <Constraint
             android:id="@+id/constraintLayoutFinanzas"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="-420dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            motion:layout_constraintVertical_bias="0.0"
+            android:layout_marginTop="20dp" />
         <Constraint
             android:id="@+id/constraintLayoutBeneficios"
             motion:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="470dp"
+            android:layout_height="0dp"
             android:translationX="0dp"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent" />
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/linear"
+            android:layout_marginTop="20dp"
+            motion:layout_constraintVertical_bias="0.0" />
         <Constraint
             android:id="@+id/ventasBtn"
             android:layout_width="wrap_content"
@@ -129,7 +151,8 @@
     <Transition
         android:id="@+id/transitionVenBen"
         motion:constraintSetStart="@+id/start"
-        motion:constraintSetEnd="@+id/beneficios" >
+        motion:constraintSetEnd="@+id/beneficios"
+        motion:duration="300">
         <OnClick motion:targetId="@+id/beneficiosBtn" />
     </Transition>
 
