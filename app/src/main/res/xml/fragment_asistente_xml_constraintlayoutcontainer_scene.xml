@@ -34,7 +34,7 @@
             android:translationX="420dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintVertical_bias="1.0"
+            motion:layout_constraintVertical_bias="0.50"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
             android:layout_marginTop="20dp" />
         <Constraint
@@ -79,7 +79,7 @@
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
-            motion:layout_constraintVertical_bias="1.0"
+            motion:layout_constraintVertical_bias="0.0"
             android:layout_marginTop="20dp" />
         <Constraint
             android:id="@+id/constraintLayoutBeneficios"
