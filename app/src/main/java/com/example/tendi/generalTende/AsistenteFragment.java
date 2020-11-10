@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -60,7 +61,16 @@ public class AsistenteFragment extends Fragment{
         TextView progresText = root.findViewById(R.id.progressValueTV);
         progress = 10;
         progresText.setText(progress+" %");
+
+        ImageView creditos = root.findViewById(R.id.creditosImageView);
         //progressBarValue.setLayoutParams(new LinearLayout.LayoutParams(40,progress));
+
+        creditos.setOnClickListener(
+                (v) -> {
+                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    startActivity(intent);
+                }
+        );
 
         pedidosBTN.setOnClickListener(
                 (v) -> {
