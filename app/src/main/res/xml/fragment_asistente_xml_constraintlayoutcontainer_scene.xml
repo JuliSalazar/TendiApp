@@ -18,14 +18,14 @@
         <Constraint
             android:id="@+id/constraintLayoutVentas"
             motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
             android:translationX="0dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintVertical_bias="1.0"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
-            android:layout_marginTop="20dp"
-            motion:layout_constraintVertical_bias="0.0" />
+            android:layout_marginTop="20dp" />
         <Constraint
             android:id="@+id/constraintLayoutFinanzas"
             motion:layout_constraintEnd_toEndOf="parent"
@@ -34,7 +34,7 @@
             android:translationX="420dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintVertical_bias="1.0"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
             android:layout_marginTop="20dp" />
         <Constraint
@@ -45,9 +45,17 @@
             android:translationX="840dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintVertical_bias="1.0"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
             android:layout_marginTop="20dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/linear" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
@@ -61,7 +69,7 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
             android:layout_marginTop="20dp"
-            motion:layout_constraintVertical_bias="0.0" />
+            motion:layout_constraintVertical_bias="1.0" />
         <Constraint
             android:id="@+id/constraintLayoutFinanzas"
             motion:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +79,7 @@
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
-            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintVertical_bias="1.0"
             android:layout_marginTop="20dp" />
         <Constraint
             android:id="@+id/constraintLayoutBeneficios"
@@ -83,7 +91,7 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
             android:layout_marginTop="20dp"
-            motion:layout_constraintVertical_bias="0.0" />
+            motion:layout_constraintVertical_bias="1.0" />
         <Constraint
             android:id="@+id/ventasBtn"
             android:layout_width="wrap_content"
@@ -110,7 +118,7 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
             android:layout_marginTop="20dp"
-            motion:layout_constraintVertical_bias="0.0" />
+            motion:layout_constraintVertical_bias="1.0" />
         <Constraint
             android:id="@+id/constraintLayoutFinanzas"
             motion:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +128,7 @@
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
-            motion:layout_constraintVertical_bias="0.0"
+            motion:layout_constraintVertical_bias="1.0"
             android:layout_marginTop="20dp" />
         <Constraint
             android:id="@+id/constraintLayoutBeneficios"
@@ -132,7 +140,7 @@
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
             android:layout_marginTop="20dp"
-            motion:layout_constraintVertical_bias="0.0" />
+            motion:layout_constraintVertical_bias="1.0" />
         <Constraint
             android:id="@+id/ventasBtn"
             android:layout_width="wrap_content"
