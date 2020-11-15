@@ -9,12 +9,14 @@ import com.example.tendi.R;
 
 public class BeneficioCredito extends AppCompatActivity {
 
-    ImageView arrowBack = findViewById(R.id.backArrowTV);
+    private ImageView arrowBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beneficio_credito);
+
+        arrowBack = findViewById(R.id.backArrowTV);
 
         arrowBack.setOnClickListener(
                 (v) -> {

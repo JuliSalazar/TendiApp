@@ -26,9 +26,6 @@ import com.example.tendi.R;
 public class AsistenteFragment extends Fragment{
 
     private int progress;
-    private PedidosFragment pedidosFragment;
-    private ConstraintLayout constraintLayoutVentas;
-
 
     public AsistenteFragment() {
         // Required empty public constructor
@@ -65,16 +62,16 @@ public class AsistenteFragment extends Fragment{
         ImageView creditos = root.findViewById(R.id.creditosImageView);
         //progressBarValue.setLayoutParams(new LinearLayout.LayoutParams(40,progress));
 
-        creditos.setOnClickListener(
+        pedidosBTN.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    Intent intent = new Intent(getActivity(),Pedidos.class);
                     startActivity(intent);
                 }
         );
 
-        pedidosBTN.setOnClickListener(
+        creditos.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(),Pedidos.class);
+                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
                     startActivity(intent);
                 }
         );

@@ -32,8 +32,6 @@ public class Pedidos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedidos);
 
-
-
         detallePedidoFragment = DetallePedidoFragment.newInstance();
 
         dellateBTN = findViewById(R.id.detalleBTN);
