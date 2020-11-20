@@ -17,6 +17,7 @@ public class BolsaDeCompra extends AppCompatActivity {
     private DatabaseReference myRef = Constants.refDB.child("Tenderos").child("1234").child("Pedidos");
 
     private ImageButton backBtn;
+    private ImageButton deleteBtn;
     private Button payBtn;
     private Button pushBtn;
     private Button removeBtn;
@@ -34,6 +35,7 @@ public class BolsaDeCompra extends AppCompatActivity {
         setContentView(R.layout.activity_bolsa_de_compra);
 
         backBtn = findViewById(R.id.backBtn);
+        deleteBtn = findViewById(R.id.deleteBtn);
         pushBtn = findViewById(R.id.pushBtn);
         removeBtn = findViewById(R.id.removeBtn);
         cant = findViewById(R.id.cantidadTV);
@@ -44,6 +46,17 @@ public class BolsaDeCompra extends AppCompatActivity {
                 (v)->{
                     Intent i = new Intent(this, TendActivity.class);
                     startActivity(i);
+                }
+        );
+
+        deleteBtn.setOnClickListener(
+                (v)->{
+                    index = 0;
+                    inde = String.valueOf(index);
+                    cant.setText(inde);
+                    total = index * 800;
+                    t = String.valueOf(total);
+                    price1TV.setText("$ " +t);
                 }
         );
 

@@ -1,6 +1,8 @@
 package com.example.tendi.generalUser;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -15,6 +17,7 @@ import com.example.tendi.R;
 
 public class TendActivity extends AppCompatActivity {
 
+
     private ImageButton returnBtn;
     private ImageButton bolsaBtn;
     private Button addBtn;
@@ -26,6 +29,9 @@ public class TendActivity extends AppCompatActivity {
     private Button granoBtn;
     private Button fyvBtn;
     private Button aseoBtn;
+    private RecyclerView productViewList;
+    private GridLayoutManager layoutManager;
+    private ProductsAdapter productsAdapter;
     private int index;
     private String inde;
 
@@ -44,7 +50,14 @@ public class TendActivity extends AppCompatActivity {
         granoBtn = findViewById(R.id.granoBtn);
         fyvBtn = findViewById(R.id.fyvBtn);
         aseoBtn = findViewById(R.id.aseoBtn);
+        productViewList = findViewById(R.id.productViewList);
         dineroTV = findViewById(R.id.dineroTV);
+
+        layoutManager = new GridLayoutManager(this,2);
+        productViewList.setLayoutManager(layoutManager);
+
+        productsAdapter = new ProductsAdapter();
+        productViewList.setAdapter(productsAdapter);
 
 
 
@@ -67,7 +80,7 @@ public class TendActivity extends AppCompatActivity {
                 }
         );
 
-        addBtn.setOnClickListener(
+       /* addBtn.setOnClickListener(
                 (v) -> {
                     index += 1;
                     inde = String.valueOf(index);
@@ -78,6 +91,8 @@ public class TendActivity extends AppCompatActivity {
 
                 }
         );
+
+        */
 
         int r = 254;
         int g = 129;
