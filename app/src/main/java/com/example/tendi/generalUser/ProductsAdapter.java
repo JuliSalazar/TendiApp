@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tendi.R;
@@ -21,9 +22,6 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductView> {
 
     public ProductsAdapter() {
         productos = new ArrayList<>();
-
-      //  productos.add(new Producto("Oreo","800"));
-
     }
 
     public void  addProduct(Producto producto){
@@ -39,7 +37,7 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductView> {
 
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View row = inflater.inflate(R.layout.productrow, null);
-        CardView rowroot = (CardView) row;
+        ConstraintLayout rowroot = (ConstraintLayout) row;
         ProductView productView = new ProductView(rowroot);
 
         return productView;

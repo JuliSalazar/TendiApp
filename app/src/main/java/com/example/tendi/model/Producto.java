@@ -1,18 +1,40 @@
 package com.example.tendi.model;
 
-public class Producto {
+import java.io.Serializable;
+
+public class Producto implements Serializable {
 
     private String id;
-    private String precio;
+    private String nombre;
+    private int precio;
+    private String img;
 
-    public Producto(String id, String precio) {
+    public Producto(int precio, String name, String img) {
 
-        this.id = id;
+        this.id = "";
         this.precio = precio;
+        this.nombre = name;
+        this.img = img;
 
     }
 
     public Producto() {
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getId() {
@@ -23,11 +45,11 @@ public class Producto {
         this.id = id;
     }
 
-    public String getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(int precio) {
         this.precio = precio;
     }
 }

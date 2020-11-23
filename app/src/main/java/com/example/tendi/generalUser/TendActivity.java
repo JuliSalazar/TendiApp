@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -42,7 +41,7 @@ public class TendActivity extends AppCompatActivity {
 
         returnBtn = findViewById(R.id.returnBtn);
         bolsaBtn = findViewById(R.id.bolsaBtn);
-        addBtn = findViewById(R.id.addBtn);
+        addBtn = findViewById(R.id.addProductBtnUser);
         indexTV = findViewById(R.id.indexTV);
         bebidaBtn = findViewById(R.id.bebidaBtn);
         mecatoBtn = findViewById(R.id.mecatoBtn);
@@ -50,7 +49,7 @@ public class TendActivity extends AppCompatActivity {
         granoBtn = findViewById(R.id.granoBtn);
         fyvBtn = findViewById(R.id.fyvBtn);
         aseoBtn = findViewById(R.id.aseoBtn);
-        productViewList = findViewById(R.id.productViewList);
+        productViewList = findViewById(R.id.productViewInvetList);
         dineroTV = findViewById(R.id.dineroTV);
 
         layoutManager = new GridLayoutManager(this,2);
