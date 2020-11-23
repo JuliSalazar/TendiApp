@@ -1,5 +1,6 @@
 package com.example.tendi.model;
 
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.cardview.widget.CardView;
@@ -12,28 +13,38 @@ public class ProductView extends RecyclerView.ViewHolder {
 
     //ESTE ES EL VIEW DE LOS PRODUCTOS EN LA TIENDA VISTA DESDE EL COMPRADOR
 
-private ConstraintLayout productView;
-private CardView imgProduct;
-private TextView productViewTV;
-private TextView priceViewTV;
+private ConstraintLayout container;
+private ImageView imgProduct;
+private TextView nombre;
+private TextView precio;
+private Producto producto;
 
-    public ProductView(ConstraintLayout productView) {
-        super(productView);
-        this.productView = productView;
-        productViewTV = productView.findViewById(R.id.nameProductTV);
-        priceViewTV = productView.findViewById(R.id.cantidadProductTV);
+    public ProductView(ConstraintLayout container) {
+        super(container);
+        this.container = container;
+        nombre = container.findViewById(R.id.nameProductUserTV);
+        precio = container.findViewById(R.id.priceProductUserTV);
+        imgProduct = container.findViewById(R.id.imgProductUser);
 
     }
 
-    public CardView getImgProduct() {
+    public ConstraintLayout getContainer() {
+        return container;
+    }
+
+    public void setProducto(Producto product) {
+        this.producto = product;
+    }
+
+    public ImageView getImgProduct() {
         return imgProduct;
     }
 
-    public TextView getProductViewTV() {
-        return productViewTV;
+    public TextView getNombre() {
+        return nombre;
     }
 
-    public TextView getPriceViewTV() {
-        return priceViewTV;
+    public TextView getPrecio() {
+        return precio;
     }
 }

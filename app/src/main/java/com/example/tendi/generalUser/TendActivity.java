@@ -7,11 +7,16 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.tendi.R;
+import com.example.tendi.model.Producto;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 
 public class TendActivity extends AppCompatActivity {
@@ -31,8 +36,11 @@ public class TendActivity extends AppCompatActivity {
     private RecyclerView productViewList;
     private GridLayoutManager layoutManager;
     private ProductsAdapter productsAdapter;
+    private FirebaseFirestore db;
+    private CollectionReference productsRef;
     private int index;
     private String inde;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,22 +57,13 @@ public class TendActivity extends AppCompatActivity {
         granoBtn = findViewById(R.id.granoBtn);
         fyvBtn = findViewById(R.id.fyvBtn);
         aseoBtn = findViewById(R.id.aseoBtn);
-        productViewList = findViewById(R.id.productViewInvetList);
         dineroTV = findViewById(R.id.dineroTV);
-
-        layoutManager = new GridLayoutManager(this,2);
-        productViewList.setLayoutManager(layoutManager);
-
-        productsAdapter = new ProductsAdapter();
-        productViewList.setAdapter(productsAdapter);
-
-
 
         returnBtn.setOnClickListener(
 
                 (v)->{
 
-                   finish();
+                    finish();
                 }
 
         );
@@ -78,7 +77,7 @@ public class TendActivity extends AppCompatActivity {
                 }
         );
 
-       /* addBtn.setOnClickListener(
+       addBtn.setOnClickListener(
                 (v) -> {
                     index += 1;
                     inde = String.valueOf(index);
@@ -90,7 +89,7 @@ public class TendActivity extends AppCompatActivity {
                 }
         );
 
-        */
+        
 
         int r = 254;
         int g = 129;
@@ -142,5 +141,34 @@ public class TendActivity extends AppCompatActivity {
                     aseoBtn.setTextColor(Color.rgb(r,g,b));
                 }
         );
+
+
+        productViewList = findViewById(R.id.productViewInvetListTend);
+        layoutManager = new GridLayoutManager(this,2);
+        productViewList.setLayoutManager(layoutManager);
+        productsAdapter = new ProductsAdapter();
+        db = FirebaseFirestore.getInstance();
+        productViewList.setAdapter(productsAdapter);
+        productViewList.setLayoutManager(layoutManager);
+        productViewList.setHasFixedSize(true);
+        productsRef = db.collection("Productos");
+
+        updateProducts();
+
+    }
+
+    public void updateProducts(){
+        productsAdapter.clearList();
+        productsRef.get().addOnCompleteListener(
+                task->{
+                    for (DocumentSnapshot doc: task.getResult().getDocuments()){
+                        Log.e("Consola", doc.getId());
+                        Producto dbProduct = doc.toObject(Producto.class);
+                        dbProduct.setId(doc.getId());
+                        productsAdapter.addProduct(dbProduct);
+                    }
+                }
+        );
+
     }
 }

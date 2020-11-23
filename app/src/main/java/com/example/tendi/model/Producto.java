@@ -2,7 +2,7 @@ package com.example.tendi.model;
 
 import java.io.Serializable;
 
-public class Producto implements Serializable {
+public class     Producto implements Serializable {
 
     private String id;
     private String nombre;
