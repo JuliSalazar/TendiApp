@@ -3,11 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/homeU"
-        android:icon="@drawable/homeicon"
-        android:title="@string/home"
-        app:showAsAction="withText" />
-    <item
         android:id="@+id/pedidosU"
         android:icon="@drawable/asistenticon"
         android:title="@string/asis" />

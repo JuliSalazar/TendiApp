@@ -1,7 +1,4 @@
-package com.example.tendi.tendero;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.tendi.InicioRegistro;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
@@ -13,14 +10,19 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.tendi.R;
-import com.example.tendi.model.Tendero;
+import com.example.tendi.generalUser.UserMainActivity;
+import com.example.tendi.usuario.Usuario;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
 
-public class RegistroTendero extends AppCompatActivity {
+public class RegistroComprador extends AppCompatActivity {
 
     private ImageButton backBTN;
     private Button continueBTN;
@@ -38,10 +40,12 @@ public class RegistroTendero extends AppCompatActivity {
     private static final int CODE = 11;
     private static final int DATE_ID = 0;
 
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_tendero);
+        setContentView(R.layout.activity_registro_comprador);
 
         backBTN = findViewById(R.id.backBTN);
         continueBTN = findViewById(R.id.continueBTN);
@@ -70,12 +74,23 @@ public class RegistroTendero extends AppCompatActivity {
 
         continueBTN.setOnClickListener(
                 (v)->{
-                    Intent i = new Intent(this, RegistroTendero2.class);
+
+                    Usuario user = new Usuario(identiEDT.getText().toString(), nameEDT.getText().toString(),
+                            contraEDT.getText().toString(), celEDT.getText().toString(),false);
+                   // Gson gson = new Gson();
+                    //String json = gson.toJson(comprador);
+
+                   /* HTTPSWebUtilDomi https = new HTTPSWebUtilDomi();
+                    new Thread(
+                            ()->{
+                                https.PUTrequest(Constants.BASEURL+"Comprador/"+comprador.getCelular()+".json",json);
+                            }
+                    ).start();*/
+
                     if(contraEDT.getText().toString().equals(confirmContraEDT.getText().toString())){
-                        Tendero tend = new Tendero(identiEDT.getText().toString(), nameEDT.getText().toString(),contraEDT.getText().toString(),
-                                celEDT.getText().toString());
-                        i.putExtra("tend", tend);
-                        startActivityForResult(i, CODE);
+                        CollectionReference usersRef = db.collection("Usuarios");
+                        usersRef.document(user.getCelular()).set(user);
+                        goToUserActivity(user);
                     }else{
                         contraEDT.setText("");
                         confirmContraEDT.setText("");
@@ -109,6 +124,12 @@ public class RegistroTendero extends AppCompatActivity {
             colocarFecha();
         }
     };
+
+    public void goToUserActivity(Usuario user){
+        Intent i = new Intent(this, UserMainActivity.class);
+        i.putExtra("myUser", user);
+        startActivity(i);
+    }
 
     private void colocarFecha(){
         naciEDT.setText(dia + "/" + (mes+1) + "/" + año);

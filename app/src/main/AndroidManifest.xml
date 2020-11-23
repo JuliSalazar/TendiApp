@@ -12,28 +12,32 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".generalUser.BolsaDeCompra"></activity>
-        <activity android:name=".generalUser.TendActivity" />
+        <activity android:name=".generalUser.TendActivity">
+        </activity>
+
+
         <activity android:name=".generalUser.UserMainActivity" />
         <activity android:name=".generalTende.Pedidos" />
 
         <activity
             android:name=".generalTende.HomeActivity">
-
-        </activity>
-
-        <activity
-            android:name=".generalTende.Inicio"
-            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tendero.RegistroTendero2" />
-        <activity android:name=".generalTende.Registro1" />
-        <activity android:name=".tendero.RegistroTendero" />
-        <activity android:name=".comprador.RegistroComprador" />
+
+        <activity
+            android:name=".InicioRegistro.Inicio"
+            android:theme="@style/SplashTheme">
+
+
+        </activity>
+        <activity android:name=".InicioRegistro.RegistroTendero2" />
+        <activity android:name=".InicioRegistro.Registro1" />
+        <activity android:name=".InicioRegistro.RegistroTendero" />
+        <activity android:name=".InicioRegistro.RegistroComprador" />
     </application>
 
 </manifest>

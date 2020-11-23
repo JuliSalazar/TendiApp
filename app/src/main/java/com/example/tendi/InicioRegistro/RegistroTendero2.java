@@ -1,4 +1,4 @@
-package com.example.tendi.tendero;
+package com.example.tendi.InicioRegistro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,11 +13,10 @@ import com.example.tendi.R;
 import com.example.tendi.generalTende.HomeActivity;
 import com.example.tendi.model.Negocio;
 import com.example.tendi.model.Tendero;
+import com.example.tendi.usuario.Usuario;
 import com.example.tendi.util.Constants;
 import com.example.tendi.util.HTTPSWebUtilDomi;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.gson.Gson;
 
 public class RegistroTendero2 extends AppCompatActivity {
@@ -28,6 +27,7 @@ public class RegistroTendero2 extends AppCompatActivity {
     private EditText negocioName;
     private EditText direcEDT;
     private EditText rutEDT;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
 
 
     @Override
@@ -42,24 +42,16 @@ public class RegistroTendero2 extends AppCompatActivity {
         direcEDT = findViewById(R.id.direcEDT);
         rutEDT = findViewById(R.id.rutEDT);
 
-        Tendero tend = (Tendero) getIntent().getExtras().getSerializable("tend");
-        Log.e("CONSOLA", tend.getName());
-
+        Usuario user = (Usuario) getIntent().getExtras().getSerializable("tend");
 
         finalizarBTN.setOnClickListener(
                 (v)->{
                     Negocio nego = new Negocio(negocioName.getText().toString(), direcEDT.getText().toString(),rutEDT.getText().toString());
-                    tend.setNegocio(nego);
-                    Gson gson = new Gson();
-                    String json = gson.toJson(tend);
-                    HTTPSWebUtilDomi https = new HTTPSWebUtilDomi();
-                    new Thread(
-                            ()->{
-                                https.PUTrequest(Constants.BASEURL+"Tenderos/"+tend.getCelular()+".json",json);
-                            }
-                    ).start();
+                    db.collection("Usuarios").document(user.getCelular()).set(user);
+                    db.collection("Negocios").document(user.getCelular()).set(nego);
                     Intent i = new Intent(this, HomeActivity.class);
                     startActivity(i);
+                    //finish();
                 }
         );
 

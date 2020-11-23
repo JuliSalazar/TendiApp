@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorOrange"
     android:backgroundTint="@color/colorOrange"
-    tools:context=".generalTende.Inicio">
+    tools:context=".InicioRegistro.Inicio">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -55,7 +55,7 @@
         tools:srcCompat="@drawable/minlogo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/welcomeTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"

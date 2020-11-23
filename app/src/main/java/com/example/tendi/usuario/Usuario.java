@@ -9,15 +9,25 @@ public class Usuario implements Serializable {
     private String name;
     private String celular;
     private String contra;
+    private boolean isTendero;
 
     public Usuario() {
     }
 
-    public Usuario(String id, String name, String contra, String celular) {
+    public Usuario(String id, String name, String contra, String celular, boolean isTendero) {
         this.id = id;
         this.name = name;
         this.celular = celular;
         this.contra = contra;
+        this.isTendero = isTendero;
+    }
+
+    public boolean isTendero() {
+        return isTendero;
+    }
+
+    public void setTendero(boolean tendero) {
+        isTendero = tendero;
     }
 
     public String getContra() {

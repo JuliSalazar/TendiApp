@@ -19,4 +19,6 @@
     <color name="navGray">#BDBDBD</color>
     <color name="DarkGray">#636363</color>
     <color name="colorError">#FF8571</color>
+    <color name="secondGreen">#38BF7E</color>
+
 </resources>

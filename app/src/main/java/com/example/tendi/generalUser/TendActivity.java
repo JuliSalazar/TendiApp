@@ -65,8 +65,7 @@ public class TendActivity extends AppCompatActivity {
 
                 (v)->{
 
-                    Intent i = new Intent(this, HomeUserFragment.class);
-                    startActivity(i);
+                   finish();
                 }
 
         );

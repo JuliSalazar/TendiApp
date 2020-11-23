@@ -17,7 +17,7 @@
     <string name="user">Soy un comprador</string>
 
     <!-- Pantalla datosTendero -->
-    <string name="instru">¡Indicanos quién eres!</string>
+    <string name="instru">¡Indícanos quién eres!</string>
     <string name="name">Tu nombre completo</string>
     <string name="ejname">Nombre completo</string>
     <string name="lastname">Tu contraseña</string>

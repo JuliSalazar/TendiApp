@@ -9,11 +9,13 @@
         android:id="@+id/constraintLayoutContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="6dp"
         app:layoutDescription="@xml/fragment_asistente_xml_constraintlayoutcontainer_scene"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31">
 
         <LinearLayout
             android:id="@+id/linear"
@@ -48,8 +50,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="false"
+                android:textAlignment="center"
                 android:textAllCaps="false"
-                android:textColor="@color/navGray" />
+                android:textColor="@color/navGray"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -152,8 +156,8 @@
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="344dp"
+                android:layout_height="187dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
@@ -210,7 +214,7 @@
 
             <TextView
                 android:id="@+id/textView18"
-                android:layout_width="105dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/poppins_regular"
@@ -706,60 +710,12 @@
 
     </androidx.constraintlayout.motion.widget.MotionLayout>
 
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icontop"
-        tools:srcCompat="@drawable/icontop" />
-
-    <ImageButton
-        android:id="@+id/pedidosBTN"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00FFFFFF"
-        android:scaleType="centerCrop"
-        android:src="@drawable/pedidosicon"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.761"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:src="@drawable/pedidosicon" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="32dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="64dp" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="45dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/ped"
-        android:textAlignment="center"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.759"
-        app:layout_constraintStart_toEndOf="@+id/imageView8"
-        app:layout_constraintTop_toTopOf="@+id/pedidosBTN"
-        tools:text="@string/ped" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline10"
@@ -774,12 +730,10 @@
         android:layout_height="0.5dp"
         android:background="#4F4F4F"
         android:backgroundTint="#4F4F4F"
-        app:layout_constraintBottom_toTopOf="@+id/guideline9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline9"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

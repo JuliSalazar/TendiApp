@@ -22,12 +22,13 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductView> {
     public ProductsAdapter() {
         productos = new ArrayList<>();
 
-        productos.add(new Producto("Oreo","800"));
+      //  productos.add(new Producto("Oreo","800"));
 
     }
 
     public void  addProduct(Producto producto){
         productos.add(producto);
+        this.notifyDataSetChanged();
     }
 
 

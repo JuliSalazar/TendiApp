@@ -1,10 +1,12 @@
-package com.example.tendi.comprador;
+package com.example.tendi.InicioRegistro;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -12,22 +14,13 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.tendi.R;
-import com.example.tendi.generalTende.HomeActivity;
-import com.example.tendi.generalUser.UserMainActivity;
-import com.example.tendi.model.Comprador;
 import com.example.tendi.model.Tendero;
-import com.example.tendi.tendero.RegistroTendero2;
-import com.example.tendi.util.Constants;
-import com.example.tendi.util.HTTPSWebUtilDomi;
-import com.google.gson.Gson;
+import com.example.tendi.usuario.Usuario;
 
 import java.util.Calendar;
 
-public class RegistroComprador extends AppCompatActivity {
+public class RegistroTendero extends AppCompatActivity {
 
     private ImageButton backBTN;
     private Button continueBTN;
@@ -48,7 +41,7 @@ public class RegistroComprador extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registro_comprador);
+        setContentView(R.layout.activity_registro_tendero);
 
         backBTN = findViewById(R.id.backBTN);
         continueBTN = findViewById(R.id.continueBTN);
@@ -77,34 +70,18 @@ public class RegistroComprador extends AppCompatActivity {
 
         continueBTN.setOnClickListener(
                 (v)->{
-                    Comprador comprador = new Comprador(identiEDT.getText().toString(), nameEDT.getText().toString(),contraEDT.getText().toString(),
-                            celEDT.getText().toString());
-
-                    Gson gson = new Gson();
-                    String json = gson.toJson(comprador);
-                    HTTPSWebUtilDomi https = new HTTPSWebUtilDomi();
-                    new Thread(
-                            ()->{
-                                https.PUTrequest(Constants.BASEURL+"Comprador/"+comprador.getCelular()+".json",json);
-                            }
-                    ).start();
-
-                    Intent i = new Intent(this, UserMainActivity.class);
-
+                    Intent i = new Intent(this, RegistroTendero2.class);
                     if(contraEDT.getText().toString().equals(confirmContraEDT.getText().toString())){
-
-
-                        startActivity(i);
+                        Usuario user = new Usuario(identiEDT.getText().toString(), nameEDT.getText().toString(),contraEDT.getText().toString(),
+                                celEDT.getText().toString(), true);
+                        i.putExtra("tend", user);
+                        startActivityForResult(i, CODE);
                     }else{
                         contraEDT.setText("");
                         confirmContraEDT.setText("");
                         confirmContraEDT.setHint("No coinciden las contraseñas");
                         confirmContraEDT.setHintTextColor(getResources().getColor(R.color.colorError));
                     }
-
-
-
-
                 }
         );
 

@@ -1,7 +1,5 @@
 package com.example.tendi.generalTende;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -11,78 +9,53 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ImageButton;
 import android.widget.RemoteViews;
 
 import com.example.tendi.R;
-import com.example.tendi.util.Constants;
+import com.example.tendi.usuario.Usuario;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private HomeFragment homeFragment;
     private AsistenteFragment asistenteFragment;
     private InventarioFragment inventarioFragment;
     private PerfilFragment perfilFragment;
     private BottomNavigationView navBar;
-
-    private DatabaseReference ref =  Constants.refDB.child("Tenderos");
+    private Usuario myUser;
+    private ImageButton pedidosBTN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        navBar = findViewById(R.id.navBarU);
+        navBar = findViewById(R.id.navBarT);
 
-
-        homeFragment = HomeFragment.newInstance();
         asistenteFragment = AsistenteFragment.newInstance();
         inventarioFragment = InventarioFragment.newInstance();
         perfilFragment = PerfilFragment.newInstance();
+        pedidosBTN= findViewById(R.id.pedidosBTN);
+
+//        myUser = (Usuario) getIntent().getExtras().getSerializable("myUser");
 
         showFragment(asistenteFragment);
 
-        ref.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                //notfication(dataSnapshot.child("Name").getValue().toString());
+        pedidosBTN.setOnClickListener(
+                (v) -> {
+                    Intent intent = new Intent(this,Pedidos.class);
+                    startActivity(intent);
+                }
+        );
 
-            }
-
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
         navBar.setOnNavigationItemSelectedListener(
                 (menuItem) ->{
                     switch (menuItem.getItemId()){
-                        case R.id.homeU:
-                            showFragment(homeFragment);
-                            break;
                         case R.id.pedidosU:
                             showFragment(asistenteFragment);
                             break;
@@ -93,7 +66,6 @@ public class HomeActivity extends AppCompatActivity {
                         case R.id.perfilU:
                             showFragment(perfilFragment);
                             break;
-
                     }
                     return true;
                 }

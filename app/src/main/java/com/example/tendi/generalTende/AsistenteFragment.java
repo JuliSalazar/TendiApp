@@ -45,7 +45,7 @@ public class AsistenteFragment extends Fragment{
         View root = inflater.inflate(R.layout.fragment_asistente, container, false);
         // Inflate the layout for this fragment
 
-        ImageButton pedidosBTN = root.findViewById(R.id.pedidosBTN);
+
         Button ventasBtn = root.findViewById(R.id.ventasBtn);
         Button finanzasBtn = root.findViewById(R.id.finanzasBtn);
         Button beneficiosBtn = root.findViewById(R.id.beneficiosBtn);
@@ -62,12 +62,7 @@ public class AsistenteFragment extends Fragment{
         ImageView creditos = root.findViewById(R.id.creditosImageView);
         //progressBarValue.setLayoutParams(new LinearLayout.LayoutParams(40,progress));
 
-        pedidosBTN.setOnClickListener(
-                (v) -> {
-                    Intent intent = new Intent(getActivity(),Pedidos.class);
-                    startActivity(intent);
-                }
-        );
+
 
         creditos.setOnClickListener(
                 (v) -> {
