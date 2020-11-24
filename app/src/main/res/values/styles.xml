@@ -80,12 +80,13 @@
 
     </style>
 
-    <style name="spinner" parent="Base.Widget.AppCompat.Spinner">
-        <item name="android:background">@drawable/etstyle</item>
+    <style name="spinner" parent="Widget.AppCompat.Spinner">
+        <item name="background">@drawable/etstyle</item>
         <item name="android:fontFamily">@font/poppins_medium</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:textColor">@color/colorLightGray</item>
         <item name="android:textSize">14dp</item>
+        <item name="backgroundTint">@color/navGray</item>
     </style>
 
 

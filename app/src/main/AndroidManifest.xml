@@ -11,23 +11,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".generalTende.EditProductActivity"></activity>
+        <activity android:name=".generalTende.EditarProductoActivity"></activity>
+        <activity android:name=".generalTende.ComprarProductActivity" />
         <activity android:name=".generalUser.BolsaDeCompra" />
-        <activity android:name=".generalUser.TendActivity"></activity>
+        <activity android:name=".generalUser.TendActivity" />
         <activity android:name=".generalUser.UserMainActivity" />
         <activity android:name=".generalTende.Pedidos" />
         <activity android:name=".generalTende.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".InicioRegistro.Inicio"
             android:theme="@style/SplashTheme">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>2838510
         </activity>
         <activity android:name=".InicioRegistro.RegistroTendero2" />
         <activity android:name=".InicioRegistro.Registro1" />

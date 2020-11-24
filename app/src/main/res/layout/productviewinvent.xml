@@ -4,23 +4,20 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="158dp"
+    android:layout_width="155dp"
 
     android:layout_height="221dp"
-    android:layout_marginStart="5dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="5dp"
-    android:layout_marginBottom="20dp"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="false"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="30dp"
     android:scaleX="1"
     android:scaleY="1"
     app:cardBackgroundColor="#00C14747"
     app:cardCornerRadius="7dp"
     app:cardPreventCornerOverlap="true"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintEnd_toStartOf="parent"
     app:layout_constraintHorizontal_bias="0.122"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintVertical_bias="0.293">
 
     <Button
@@ -28,11 +25,12 @@
         style="@style/MainButton"
         android:layout_width="62dp"
         android:layout_height="23dp"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|center|right"
         android:backgroundTint="@color/secondGreen"
         android:scaleX="1"
         android:scaleY="1"
         android:text="5 Unds"
+        android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -41,10 +39,10 @@
         android:id="@+id/nameProductTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:fontFamily="@font/poppins_medium"
         android:textColor="#636363"
-        android:textSize="18sp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/cantidadProductTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/containerImgProduct" />
@@ -79,8 +77,8 @@
 
         <ImageView
             android:id="@+id/imgProductInvent"
-            android:layout_width="122dp"
-            android:layout_height="122dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_gravity="center"
             android:scaleType="centerInside"
             app:srcCompat="@drawable/galleta" />

@@ -15,22 +15,48 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/productViewInvetList"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="34dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <View
+        android:id="@+id/view10"
+        android:layout_width="wrap_content"
+        android:layout_height="86dp"
+        android:background="@color/secondGreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="426dp"
+        android:layout_height="128dp"
+        android:background="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view10"
+        app:layout_constraintVertical_bias="0.0" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="412dp"
+        android:layout_width="0dp"
         android:layout_height="49dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2">
+        app:layout_constraintTop_toBottomOf="@+id/agregarProductosInvent">
 
         <Button
             android:id="@+id/bebidaBtn"
@@ -40,6 +66,7 @@
             android:layout_weight="0"
             android:background="#FFFFFF"
             android:capitalize="words"
+            android:paddingLeft="29dp"
             android:text="Todos"
             android:textColor="#BDBDBD"
             android:textColorHint="#FE811E" />
@@ -102,28 +129,6 @@
 
     </LinearLayout>
 
-    <View
-        android:id="@+id/view10"
-        android:layout_width="wrap_content"
-        android:layout_height="86dp"
-        android:background="@color/secondGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <View
-        android:id="@+id/view11"
-        android:layout_width="wrap_content"
-        android:layout_height="86dp"
-        android:background="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.0" />
-
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
@@ -156,7 +161,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/agregarProductosInvent"
         style="@style/MainButton"
         android:layout_width="156dp"
         android:layout_height="33dp"
@@ -170,14 +175,14 @@
     <Button
         android:id="@+id/button3"
         style="@style/MainButton"
-        android:layout_width="156dp"
+        android:layout_width="165dp"
         android:layout_height="33dp"
-        android:text="Agregar producto"
+        android:text="Productos agotados"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2" />
+        app:layout_constraintStart_toEndOf="@+id/agregarProductosInvent"
+        app:layout_constraintTop_toTopOf="@+id/agregarProductosInvent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

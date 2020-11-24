@@ -1,5 +1,6 @@
 package com.example.tendi.generalTende;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.tendi.R;
 import com.example.tendi.model.Producto;
@@ -25,6 +27,7 @@ public class InventarioFragment extends Fragment {
     private ProductsTendAdapter adapater;
     private FirebaseFirestore db;
     private CollectionReference productsRef;
+    private Button addProducts;
 
     public InventarioFragment() {
         // Required empty public constructor
@@ -54,6 +57,15 @@ public class InventarioFragment extends Fragment {
         productsViewList.setHasFixedSize(true);
         productsRef = db.collection("Productos");
 
+        addProducts = root.findViewById(R.id.agregarProductosInvent);
+
+        addProducts.setOnClickListener(
+                (v)->{
+                    Intent intent = new Intent(getActivity(),ComprarProductActivity.class);
+                    startActivity(intent);
+                }
+        );
+
         updateProducts();
 
         // Inflate the layout for this fragment
@@ -64,7 +76,6 @@ public class InventarioFragment extends Fragment {
         productsRef.get().addOnCompleteListener(
                 task->{
                     for (DocumentSnapshot doc: task.getResult().getDocuments()){
-                        Log.e("Consola", doc.getId());
                         Producto dbProduct = doc.toObject(Producto.class);
                         dbProduct.setId(doc.getId());
                         adapater.addProduct(dbProduct);

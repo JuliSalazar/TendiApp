@@ -16,35 +16,36 @@ import com.example.tendi.model.Producto;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class ProductsTendAdapter extends RecyclerView.Adapter<ProductInvetView> implements ProductInvetView.onProductItemAction{
+public class ComprarProductAdapter extends RecyclerView.Adapter<ComprarProductView> implements ComprarProductView.onProductItemAction{
 
     private ArrayList<Producto> productos;
 
-    public ProductsTendAdapter() {
+    public ComprarProductAdapter() {
         this.productos = new ArrayList<>();
     }
 
-    public void addProduct(Producto producto){
+    public void addProducto(Producto producto){
         productos.add(producto);
         this.notifyDataSetChanged();
     }
 
     @NonNull
     @Override
-    public ProductInvetView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ComprarProductView onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View row = inflater.inflate(R.layout.productviewinvent,parent,false);
-        ConstraintLayout rowroot = (ConstraintLayout) row;
-        ProductInvetView productInvetView = new ProductInvetView(rowroot);
-        productInvetView.setListener(this);
-        return productInvetView;
+        View root = inflater.inflate(R.layout.compraproductoview,parent,false);
+        ConstraintLayout CLroot = (ConstraintLayout) root;
+        ComprarProductView comprarProductView = new ComprarProductView(CLroot);
+        comprarProductView.setListener(this);
+        return comprarProductView;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductInvetView holder, int position) {
+    public void onBindViewHolder(@NonNull ComprarProductView holder, int position) {
+
         Producto producto = productos.get(position);
         holder.getName().setText(producto.getNombre());
-       // holder.getUnits().setText();
+        // holder.getUnits().setText();
         Glide.with(holder.getRoot()).load(producto.getImg()).into(holder.getImg());
         holder.setProducto(producto);
 
@@ -61,10 +62,9 @@ public class ProductsTendAdapter extends RecyclerView.Adapter<ProductInvetView> 
     }
 
     @Override
-    public void editProduct(Producto product, View v) {
-        Intent i = new Intent(v.getContext(), EditarProductoActivity.class);
+    public void showProveedor(Producto product, View v) {
+        Intent i = new Intent(v.getContext(), Proveedor.class);
         i.putExtra("producto", (Serializable) product);
         v.getContext().startActivity(i);
-
     }
 }
