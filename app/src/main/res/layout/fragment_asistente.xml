@@ -156,7 +156,7 @@
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="344dp"
+                android:layout_width="0dp"
                 android:layout_height="187dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
@@ -624,50 +624,50 @@
 
             <ImageView
                 android:id="@+id/creditosImageView"
-                android:layout_width="0dp"
+                android:layout_width="280dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="50dp"
-                android:layout_marginEnd="22dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/creditooff" />
 
             <ImageView
                 android:id="@+id/segurosImageView"
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="22dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="@+id/view8"
                 app:layout_constraintTop_toBottomOf="@+id/creditosImageView"
                 app:srcCompat="@drawable/segurosoff" />
 
             <ImageView
                 android:id="@+id/ahorroImageView"
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="22dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="@+id/view8"
                 app:layout_constraintTop_toBottomOf="@+id/segurosImageView"
                 app:srcCompat="@drawable/ahorrooff" />
 
             <ImageView
                 android:id="@+id/capacitacionesImageView"
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="22dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="@+id/view8"
                 app:layout_constraintTop_toBottomOf="@+id/ahorroImageView"
-                app:srcCompat="@drawable/capacitacionesoff" />
+                app:srcCompat="@drawable/capacitacioneson" />
 
             <ImageView
                 android:id="@+id/bonosImageView6"
-                android:layout_width="wrap_content"
+                android:layout_width="280dp"
                 android:layout_height="70dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginEnd="22dp"
+                android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="@+id/view8"
                 app:layout_constraintTop_toBottomOf="@+id/capacitacionesImageView"
                 app:srcCompat="@drawable/bonoson" />
@@ -699,7 +699,7 @@
             <LinearLayout
                 android:id="@+id/progressBarValue"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_height="140dp"
                 android:layout_marginStart="32dp"
                 android:background="@drawable/progressbarbg"
                 android:orientation="horizontal"

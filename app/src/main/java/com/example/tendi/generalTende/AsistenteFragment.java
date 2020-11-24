@@ -56,7 +56,7 @@ public class AsistenteFragment extends Fragment{
 
         LinearLayout progressBarValue = root.findViewById(R.id.progressBarValue);
         TextView progresText = root.findViewById(R.id.progressValueTV);
-        progress = 10;
+        progress = 20;
         progresText.setText(progress+" %");
 
         ImageView creditos = root.findViewById(R.id.creditosImageView);
