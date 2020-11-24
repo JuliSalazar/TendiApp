@@ -81,7 +81,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/poppins_regular"
-        android:text="Seleccione la categoria"
+        android:text="Selecciona la categoria"
         android:textColor="@color/colorWhite"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/view13"
@@ -89,14 +89,13 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/view13"
         app:layout_constraintTop_toBottomOf="@+id/view12"
-        tools:text="Seleccione la categoria" />
+        tools:text="Selecciona la categoria" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/comprarProductoRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginLeft="34dp"
-        android:layout_marginTop="20dp"
         android:layout_marginRight="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -63,7 +63,7 @@ public class ComprarProductAdapter extends RecyclerView.Adapter<ComprarProductVi
 
     @Override
     public void showProveedor(Producto product, View v) {
-        Intent i = new Intent(v.getContext(), Proveedor.class);
+        Intent i = new Intent(v.getContext(), ProveedoresActivity.class);
         i.putExtra("producto", (Serializable) product);
         v.getContext().startActivity(i);
     }
