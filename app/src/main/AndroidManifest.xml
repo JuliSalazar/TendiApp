@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".generalTende.ProveedoresActivity"></activity>
+        <activity android:name=".generalTende.DetalleCompraProveedor"></activity>
+        <activity android:name=".generalTende.ProveedoresActivity" />
         <activity android:name=".generalTende.EditarProductoActivity" />
         <activity android:name=".generalTende.ComprarProductActivity" />
         <activity android:name=".generalUser.BolsaDeCompra" />
@@ -27,7 +28,7 @@
         </activity>
         <activity
             android:name=".InicioRegistro.Inicio"
-            android:theme="@style/SplashTheme"></activity>
+            android:theme="@style/SplashTheme" />
         <activity android:name=".InicioRegistro.RegistroTendero2" />
         <activity android:name=".InicioRegistro.Registro1" />
         <activity android:name=".InicioRegistro.RegistroTendero" />

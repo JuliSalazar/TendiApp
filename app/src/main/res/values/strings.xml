@@ -84,5 +84,7 @@
     <string name="metas">Metas</string>
     <string name="addMeta">Agregar meta</string>
 
+    <string name="addProductos">Agregar productos</string>
+
 
 </resources>

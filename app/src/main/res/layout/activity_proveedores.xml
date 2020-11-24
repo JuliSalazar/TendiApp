@@ -27,7 +27,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view16" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/backProveedoresBTN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -43,12 +43,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="Agregar productos"
+        android:text="@string/addProductos"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+        app:layout_constraintBottom_toBottomOf="@+id/backProveedoresBTN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/view16"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+        app:layout_constraintTop_toTopOf="@+id/backProveedoresBTN"
+        tools:text="@string/addProductos" />
 
     <TextView
         android:id="@+id/textView43"
@@ -62,13 +63,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/view14"
         app:layout_constraintStart_toStartOf="@+id/view14"
         app:layout_constraintTop_toBottomOf="@+id/view16" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="34dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/proveedoresRecyclerV"
