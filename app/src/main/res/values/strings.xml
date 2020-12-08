@@ -52,10 +52,17 @@
     <string name="hoy">Ventas hoy</string>
     <string name="sem">Ventas esta semana</string>
 
+    <string name="notif">Notificaciones</string>
     <string name="home">Inicio</string>
     <string name="asis">Asistente</string>
     <string name="invent">Inventario</string>
     <string name="perf">Perfil</string>
+
+
+    <!-- Instrucciones -->
+    <string name="bienvenida">Nuevos</string>
+
+
 
     <!-- Pantalla pedidos -->
     <string name="nuevo">Nuevos</string>

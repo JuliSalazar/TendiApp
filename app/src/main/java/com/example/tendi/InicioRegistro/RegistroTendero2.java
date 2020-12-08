@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 
 import com.example.tendi.R;
 import com.example.tendi.generalTende.HomeActivity;
+import com.example.tendi.generalTende.InstruccionesPopUp;
 import com.example.tendi.model.Negocio;
 import com.example.tendi.model.Tendero;
 import com.example.tendi.usuario.Usuario;
@@ -28,6 +29,7 @@ public class RegistroTendero2 extends AppCompatActivity {
     private EditText direcEDT;
     private EditText rutEDT;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private static final int CODE = 12;
 
 
     @Override
@@ -50,7 +52,8 @@ public class RegistroTendero2 extends AppCompatActivity {
                     db.collection("Usuarios").document(user.getCelular()).set(user);
                     db.collection("Negocios").document(user.getCelular()).set(nego);
                     Intent i = new Intent(this, HomeActivity.class);
-                    startActivity(i);
+                    i.putExtra("NewTend", user);
+                    startActivityForResult(i, CODE);
                     //finish();
                 }
         );
