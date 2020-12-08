@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private AsistenteFragment asistenteFragment;
     private InventarioFragment inventarioFragment;
+    private NotifFragment notiFragment;
     private PerfilFragment perfilFragment;
     private BottomNavigationView navBar;
     private Usuario myUser;
@@ -38,10 +39,24 @@ public class HomeActivity extends AppCompatActivity {
 
         asistenteFragment = AsistenteFragment.newInstance();
         inventarioFragment = InventarioFragment.newInstance();
+        notiFragment = NotifFragment.newInstance();
         perfilFragment = PerfilFragment.newInstance();
         pedidosBTN= findViewById(R.id.pedidosBTN);
 
-//        myUser = (Usuario) getIntent().getExtras().getSerializable("myUser");
+        if(getIntent().getExtras().getSerializable("NewTend") != null){
+            myUser = (Usuario) getIntent().getExtras().getSerializable("NewTend");
+            Intent i = new Intent(this, InstruccionesPopUp.class);
+            i.putExtra("userName",myUser.getName());
+            startActivityForResult(i, 14);
+        }else{
+            myUser = (Usuario) getIntent().getExtras().getSerializable("myUser");
+            Intent i = new Intent(this, InstruccionesPopUp.class);
+            i.putExtra("userName",myUser.getName());
+            startActivityForResult(i, 13);
+        }
+
+        Log.e("CONSOLA", String.valueOf(getIntent().getExtras().getSerializable("myUser")));
+        Log.e("CONSOLA", String.valueOf(getIntent().getExtras().getSerializable("NewTend")));
 
         showFragment(asistenteFragment);
 
@@ -61,6 +76,10 @@ public class HomeActivity extends AppCompatActivity {
                             break;
                         case R.id.invent:
                             showFragment(inventarioFragment);
+                            break;
+
+                        case R.id.notif:
+                            showFragment(notiFragment);
                             break;
 
                         case R.id.perfilU:

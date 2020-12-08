@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".generalTende.DetalleCompraProveedor"></activity>
+        <activity android:name=".generalTende.InstruccionesPopUp" android:theme="@style/AppTheme.TemaPopUp"></activity>
+        <activity android:name=".generalTende.DetalleCompraProveedor" />
         <activity android:name=".generalTende.ProveedoresActivity" />
         <activity android:name=".generalTende.EditarProductoActivity" />
         <activity android:name=".generalTende.ComprarProductActivity" />
@@ -19,16 +20,16 @@
         <activity android:name=".generalUser.TendActivity" />
         <activity android:name=".generalUser.UserMainActivity" />
         <activity android:name=".generalTende.Pedidos" />
-        <activity android:name=".generalTende.HomeActivity">
+        <activity android:name=".generalTende.HomeActivity"></activity>
+        <activity
+            android:name=".InicioRegistro.Inicio"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".InicioRegistro.Inicio"
-            android:theme="@style/SplashTheme" />
         <activity android:name=".InicioRegistro.RegistroTendero2" />
         <activity android:name=".InicioRegistro.Registro1" />
         <activity android:name=".InicioRegistro.RegistroTendero" />

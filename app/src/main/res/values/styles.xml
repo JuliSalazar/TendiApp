@@ -88,6 +88,12 @@
         <item name="android:textSize">14dp</item>
         <item name="backgroundTint">@color/navGray</item>
     </style>
+    
+    <style name="AppTheme.TemaPopUp">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:bottom">0dp</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
 
 
 
