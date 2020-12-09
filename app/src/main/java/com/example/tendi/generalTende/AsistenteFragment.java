@@ -1,21 +1,14 @@
 package com.example.tendi.generalTende;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
-import android.transition.Transition;
-import android.util.Log;
-import android.view.DragEvent;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -69,35 +62,35 @@ public class AsistenteFragment extends Fragment{
 
         creditos.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
                     startActivity(intent);
                 }
         );
 
         seguros.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
                     startActivity(intent);
                 }
         );
 
         ahorro.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
                     startActivity(intent);
                 }
         );
 
         capacitaciones.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
                     startActivity(intent);
                 }
         );
 
         bonos.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
                     startActivity(intent);
                 }
         );
