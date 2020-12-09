@@ -3,20 +3,20 @@ package com.example.tendi.generalTende;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 
 import com.example.tendi.R;
 
-public class BeneficioCredito extends AppCompatActivity {
+public class BeneficioBonosActivity extends AppCompatActivity {
 
-    private ImageView arrowBack;
+    private ImageButton arrowBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beneficio_credito);
+        setContentView(R.layout.activity_beneficio_bonos);
 
-        arrowBack = findViewById(R.id.backArrowTV);
+        arrowBack = findViewById(R.id.backBeneficioAhorroBtn);
 
         arrowBack.setOnClickListener(
                 (v) -> {
