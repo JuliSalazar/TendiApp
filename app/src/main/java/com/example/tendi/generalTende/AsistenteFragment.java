@@ -61,11 +61,41 @@ public class AsistenteFragment extends Fragment{
         progresText.setText(progress+" %");
 
         ImageView creditos = root.findViewById(R.id.creditosImageView);
+        ImageView seguros = root.findViewById(R.id.creditosImageView);
+        ImageView ahorro = root.findViewById(R.id.creditosImageView);
+        ImageView capacitaciones = root.findViewById(R.id.creditosImageView);
+        ImageView bonos = root.findViewById(R.id.creditosImageView);
         //progressBarValue.setLayoutParams(new LinearLayout.LayoutParams(40,progress));
 
-
-
         creditos.setOnClickListener(
+                (v) -> {
+                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    startActivity(intent);
+                }
+        );
+
+        seguros.setOnClickListener(
+                (v) -> {
+                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    startActivity(intent);
+                }
+        );
+
+        ahorro.setOnClickListener(
+                (v) -> {
+                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    startActivity(intent);
+                }
+        );
+
+        capacitaciones.setOnClickListener(
+                (v) -> {
+                    Intent intent = new Intent(getActivity(),BeneficioCredito.class);
+                    startActivity(intent);
+                }
+        );
+
+        bonos.setOnClickListener(
                 (v) -> {
                     Intent intent = new Intent(getActivity(),BeneficioCredito.class);
                     startActivity(intent);
