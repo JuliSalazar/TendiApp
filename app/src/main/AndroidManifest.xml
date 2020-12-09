@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".generalTende.TopVentasActivity"></activity>
+        <activity android:name=".generalTende.BeneficioCapacitacionesActivity"></activity>
+        <activity android:name=".generalTende.TopVentasActivity" />
         <activity
             android:name=".generalTende.InstruccionesPopUp"
             android:theme="@style/AppTheme.TemaPopUp" />
