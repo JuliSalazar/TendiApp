@@ -49,6 +49,7 @@ public class AsistenteFragment extends Fragment{
         Button ventasBtn = root.findViewById(R.id.ventasBtn);
         Button finanzasBtn = root.findViewById(R.id.finanzasBtn);
         Button beneficiosBtn = root.findViewById(R.id.beneficiosBtn);
+        Button infoProductsBtn = root.findViewById(R.id.infoProductsBtn);
 
         Button ventasBtnClickable = root.findViewById(R.id.ventasBtnClickable);
         Button finanzasBtnClickable = root.findViewById(R.id.finanzasBtnClickable);
@@ -104,6 +105,13 @@ public class AsistenteFragment extends Fragment{
                     ventasBtnClickable.setClickable(true);
                     finanzasBtnClickable.setClickable(true);
                     beneficiosBtnClickable.setClickable(false);
+                }
+        );
+
+        infoProductsBtn.setOnClickListener(
+                (v) -> {
+                    Intent intent = new Intent(getActivity(),TopVentasActivity.class);
+                    startActivity(intent);
                 }
         );
 

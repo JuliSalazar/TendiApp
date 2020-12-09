@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".generalTende.InstruccionesPopUp" android:theme="@style/AppTheme.TemaPopUp"></activity>
+        <activity android:name=".generalTende.TopVentasActivity"></activity>
+        <activity
+            android:name=".generalTende.InstruccionesPopUp"
+            android:theme="@style/AppTheme.TemaPopUp" />
         <activity android:name=".generalTende.DetalleCompraProveedor" />
         <activity android:name=".generalTende.ProveedoresActivity" />
         <activity android:name=".generalTende.EditarProductoActivity" />
@@ -20,7 +23,7 @@
         <activity android:name=".generalUser.TendActivity" />
         <activity android:name=".generalUser.UserMainActivity" />
         <activity android:name=".generalTende.Pedidos" />
-        <activity android:name=".generalTende.HomeActivity"></activity>
+        <activity android:name=".generalTende.HomeActivity" />
         <activity
             android:name=".InicioRegistro.Inicio"
             android:theme="@style/SplashTheme">

@@ -22,7 +22,7 @@
         tools:srcCompat="@drawable/newbuton" />
 
     <View
-        android:id="@+id/divider3"
+        android:id="@+id/divider4"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginTop="6dp"
@@ -185,7 +185,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider3"
+        app:layout_constraintTop_toBottomOf="@+id/divider4"
         app:layout_constraintVertical_bias="1.0">
 
     </androidx.constraintlayout.widget.ConstraintLayout>
