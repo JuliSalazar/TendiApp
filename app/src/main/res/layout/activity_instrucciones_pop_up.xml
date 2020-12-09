@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_alignParentBottom="true"
     android:layout_gravity="bottom"
-    android:background="#00000000"
-    android:backgroundTint="#00000000"
+    android:background="@android:color/transparent"
     android:foregroundGravity="bottom"
-    app:layoutDescription="@xml/activity_instrucciones_pop_up_scene"
+    app:layoutDescription="@xml/activity_instrucciones_pop_up_scene2"
     tools:context=".generalTende.InstruccionesPopUp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout8"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#00FFFFFF"
-        android:backgroundTint="#00FFFFFF"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
         android:foregroundGravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
+
 
         <ImageView
             android:id="@+id/imageView19"
@@ -30,7 +31,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/pjamarillo" />
+            app:srcCompat="@drawable/pjamarillo"
+            tools:srcCompat="@drawable/pjamarillo" />
 
         <ImageView
             android:id="@+id/imageView23"
@@ -40,7 +42,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/dialogorange" />
+            app:srcCompat="@drawable/dialogorange"
+            tools:srcCompat="@drawable/dialogorange" />
 
         <TextView
             android:id="@+id/bienvenidaTV"
@@ -61,4 +64,58 @@
             app:layout_constraintVertical_bias="0.100000024"
             tools:ignore="RtlCompat" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:foregroundGravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="39dp"
+            app:layout_constraintBottom_toTopOf="@+id/imageView25"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/dialogorange"
+            tools:srcCompat="@drawable/dialogorange" />
+
+        <ImageView
+            android:id="@+id/imageView25"
+            android:layout_width="211dp"
+            android:layout_height="173dp"
+            android:scaleType="matrix"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/pjamarillo"
+            tools:srcCompat="@drawable/pjamarillo" />
+
+        <TextView
+            android:id="@+id/infotv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="bottom"
+            android:text="Hola"
+            android:textAlignment="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView24"
+            app:layout_constraintVertical_bias="0.39"
+            tools:ignore="RtlCompat" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
