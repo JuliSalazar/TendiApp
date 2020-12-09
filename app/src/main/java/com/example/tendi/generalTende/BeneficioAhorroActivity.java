@@ -7,14 +7,14 @@ import android.widget.ImageButton;
 
 import com.example.tendi.R;
 
-public class BeneficioCredito extends AppCompatActivity {
+public class BeneficioAhorroActivity extends AppCompatActivity {
 
     private ImageButton arrowBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beneficio_credito);
+        setContentView(R.layout.activity_beneficio_ahorro);
 
         arrowBack = findViewById(R.id.backBeneficioAhorroBtn);
 
