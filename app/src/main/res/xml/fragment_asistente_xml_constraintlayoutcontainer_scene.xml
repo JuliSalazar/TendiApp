@@ -17,15 +17,16 @@
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/constraintLayoutVentas"
-            motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_width="0dp"
+            android:layout_height="582dp"
             android:translationX="0dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toBottomOf="@+id/linear"
             android:layout_marginTop="20dp"
-            motion:layout_constraintVertical_bias="1.0" />
+            motion:layout_constraintVertical_bias="1.0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_editor_absoluteY="70dp" />
         <Constraint
             android:id="@+id/constraintLayoutFinanzas"
             motion:layout_constraintEnd_toEndOf="parent"
