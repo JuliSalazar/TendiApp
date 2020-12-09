@@ -618,10 +618,20 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
+                android:id="@+id/imageView27"
+                android:layout_width="0dp"
+                android:layout_height="142dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/assistantbenifitsdialog" />
+
+            <ImageView
                 android:id="@+id/creditosImageView"
                 android:layout_width="280dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="177dp"
                 android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="parent"
@@ -672,7 +682,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="42dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="150dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="10%"
                 android:textColor="@color/colorWhite"
@@ -680,18 +690,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/progressBarBG"
                 android:layout_width="40dp"
                 android:layout_height="390dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/bglinearly"
+                android:background="@drawable/progressbarcontainer"
                 android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/progressValueTV"></LinearLayout>
+                app:layout_constraintTop_toBottomOf="@+id/progressValueTV"></androidx.constraintlayout.widget.ConstraintLayout>
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/progressBarValue"
                 android:layout_width="40dp"
                 android:layout_height="140dp"
@@ -699,7 +709,23 @@
                 android:background="@drawable/progressbarbg"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="@+id/progressBarBG"
-                app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageView26"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:foregroundGravity="center|fill"
+                    android:scaleType="fitStart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/bubbles" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
