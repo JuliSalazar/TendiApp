@@ -23,7 +23,7 @@
         android:id="@+id/imageView28"
         android:layout_width="0dp"
         android:layout_height="213sp"
-        android:background="@drawable/fondoperfil"
+        android:background="@drawable/tiendafondo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
         android:id="@+id/imageView29"
         android:layout_width="match_parent"
         android:layout_height="450dp"
-        android:background="@drawable/circulosfondo"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

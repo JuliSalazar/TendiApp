@@ -31,7 +31,7 @@
     <string name="cont">Continuar</string>
 
     <!-- Pantalla datosTienda -->
-    <string name="instruT">¡Ahora la información de tu tienda!</string>
+    <string name="instruT">Ahora coloca los datos de tu tienda</string>
     <string name="nameT">Nombre de la tienda</string>
     <string name="ejnameT">Nombre de la tienda</string>
     <string name="direction">Dirección de la tienda</string>

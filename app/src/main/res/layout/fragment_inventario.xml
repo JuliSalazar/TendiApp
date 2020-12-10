@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent"
+    android:background="@color/bgAppColor">
+
+    <ImageView
+        android:id="@+id/imageView42"
+        android:layout_width="0dp"
+        android:layout_height="192dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/inventariobg"
+        tools:srcCompat="@drawable/inventariobg" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
@@ -21,39 +32,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <View
-        android:id="@+id/view10"
-        android:layout_width="wrap_content"
-        android:layout_height="86dp"
-        android:background="@color/secondGreen"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <View
-        android:id="@+id/view11"
-        android:layout_width="426dp"
-        android:layout_height="128dp"
-        android:background="@color/colorWhite"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.0" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="49dp"
-        android:layout_marginTop="8dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agregarProductosInvent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView42">
 
         <Button
             android:id="@+id/bebidaBtn"
@@ -131,17 +120,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="25dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Mi inventario"
         android:textColor="@color/colorWhite"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view10"
-        app:layout_constraintEnd_toEndOf="@+id/view10"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view10"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/imageView42" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -152,9 +137,7 @@
         android:ems="10"
         android:hint="Nombre del producto"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/view10"
-        app:layout_constraintHorizontal_bias="0.515"
-        app:layout_constraintStart_toStartOf="@+id/view10"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
@@ -163,7 +146,7 @@
         android:layout_width="156dp"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
-        android:text="Agregar producto"
+        android:text="Comprar"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
@@ -174,7 +157,7 @@
         style="@style/MainButton"
         android:layout_width="165dp"
         android:layout_height="33dp"
-        android:text="Productos agotados"
+        android:text="Agregar"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"

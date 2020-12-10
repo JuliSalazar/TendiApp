@@ -50,9 +50,9 @@ public class HomeActivity extends AppCompatActivity {
             startActivityForResult(i, 14);
         }else{
             myUser = (Usuario) getIntent().getExtras().getSerializable("myUser");
-            Intent i = new Intent(this, InstruccionesPopUp.class);
+          /*  Intent i = new Intent(this, InstruccionesPopUp.class);
             i.putExtra("userName",myUser.getName());
-            startActivityForResult(i, 13);
+            startActivityForResult(i, 13);*/
         }
 
         Log.e("CONSOLA", String.valueOf(getIntent().getExtras().getSerializable("myUser")));

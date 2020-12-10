@@ -21,5 +21,6 @@
     <color name="colorError">#FF8571</color>
     <color name="secondGreen">#38BF7E</color>
     <color name="lightGreen">#81D3AC</color>
+    <color name="bgAppColor">#EFEFEF</color>
 
 </resources>

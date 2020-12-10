@@ -3,6 +3,7 @@ package com.example.tendi.generalTende;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -48,42 +49,42 @@ public class AsistenteFragment extends Fragment{
         Button finanzasBtnClickable = root.findViewById(R.id.finanzasBtnClickable);
         Button beneficiosBtnClickable = root.findViewById(R.id.beneficiosBtnClickable);
 
-        LinearLayout progressBarValue = root.findViewById(R.id.progressBarValue);
+       // ConstraintLayout progressBarValue = root.findViewById(R.id.progressBarValue);
         TextView progresText = root.findViewById(R.id.progressValueTV);
         progress = 20;
         progresText.setText(progress+" %");
 
         ImageView creditos = root.findViewById(R.id.creditosImageView);
-        ImageView seguros = root.findViewById(R.id.creditosImageView);
-        ImageView ahorro = root.findViewById(R.id.creditosImageView);
-        ImageView capacitaciones = root.findViewById(R.id.creditosImageView);
-        ImageView bonos = root.findViewById(R.id.creditosImageView);
+        ImageView seguros = root.findViewById(R.id.segurosImageView);
+        ImageView ahorro = root.findViewById(R.id.ahorroImageView);
+        ImageView capacitaciones = root.findViewById(R.id.capacitacionesImageView);
+        ImageView bonos = root.findViewById(R.id.bonosImageView6);
         //progressBarValue.setLayoutParams(new LinearLayout.LayoutParams(40,progress));
 
         creditos.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
+                    Intent intent = new Intent(getActivity(), BeneficioCreditosActivity.class);
                     startActivity(intent);
                 }
         );
 
         seguros.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
+                    Intent intent = new Intent(getActivity(), BeneficioSegurosActivity.class);
                     startActivity(intent);
                 }
         );
 
         ahorro.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
+                    Intent intent = new Intent(getActivity(), BeneficioAhorroActivity.class);
                     startActivity(intent);
                 }
         );
 
         capacitaciones.setOnClickListener(
                 (v) -> {
-                    Intent intent = new Intent(getActivity(), BeneficioBonosActivity.class);
+                    Intent intent = new Intent(getActivity(), BeneficioCapacitacionesActivity.class);
                     startActivity(intent);
                 }
         );

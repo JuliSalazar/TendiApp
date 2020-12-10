@@ -16,7 +16,7 @@ public class BeneficioBonosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_beneficio_bonos);
 
-        arrowBack = findViewById(R.id.backBeneficioAhorroBtn);
+        arrowBack = findViewById(R.id.backBeneficioBonosBtn);
 
         arrowBack.setOnClickListener(
                 (v) -> {

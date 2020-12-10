@@ -19,7 +19,7 @@ public class ProductInvetView extends RecyclerView.ViewHolder implements View.On
     private ConstraintLayout root;
     private ImageView img;
     private TextView name;
-    private Button units;
+    private TextView units;
     private ImageButton editProduct;
     private onProductItemAction listener;
     private Producto producto;
@@ -30,20 +30,20 @@ public class ProductInvetView extends RecyclerView.ViewHolder implements View.On
         name = root.findViewById(R.id.nameProductTV);
         img = root.findViewById(R.id.imgProductInvent);
         units = root.findViewById(R.id.undsBTN);
-        editProduct = root.findViewById(R.id.editProductBTN);
+       // editProduct = root.findViewById(R.id.editProductBTN);
 
-        editProduct.setOnClickListener(this);
+      //  editProduct.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+       /* switch (v.getId()){
             case R.id.editProductBTN:
                 if (listener!=null){
                     listener.editProduct(this.producto,this.root);
                 }
                 break;
-        }
+        }*/
     }
 
     public interface onProductItemAction{
@@ -71,7 +71,7 @@ public class ProductInvetView extends RecyclerView.ViewHolder implements View.On
         return name;
     }
 
-    public Button getUnits() {
+    public TextView getUnits() {
         return units;
     }
 

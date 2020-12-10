@@ -625,13 +625,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/assistantBenifitsDialog" />
+                app:srcCompat="@drawable/assistantbenifitsdialog" />
 
             <ImageView
                 android:id="@+id/creditosImageView"
                 android:layout_width="280dp"
                 android:layout_height="70dp"
-                android:layout_marginTop="177dp"
+                android:layout_marginTop="160dp"
                 android:layout_marginEnd="32dp"
                 app:layout_constraintEnd_toEndOf="@+id/view8"
                 app:layout_constraintTop_toTopOf="parent"
@@ -682,7 +682,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="42dp"
-                android:layout_marginTop="150dp"
+                android:layout_marginTop="135dp"
                 android:fontFamily="@font/poppins_bold"
                 android:text="10%"
                 android:textColor="@color/colorWhite"
@@ -693,7 +693,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/progressBarBG"
                 android:layout_width="40dp"
-                android:layout_height="390dp"
+                android:layout_height="385dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/progressbarcontainer"

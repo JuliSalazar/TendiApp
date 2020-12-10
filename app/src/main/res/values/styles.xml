@@ -4,7 +4,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorOrange</item>
         <item name="colorPrimaryDark">@color/colorOrangeDark</item>
-        <item name="background">@color/colorWhite</item>
+
 
     </style>
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">

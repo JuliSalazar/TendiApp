@@ -4,8 +4,8 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="155dp"
 
+    android:layout_width="155dp"
     android:layout_height="221dp"
     android:layout_centerInParent="false"
     android:layout_centerHorizontal="false"
@@ -13,91 +13,69 @@
     android:layout_marginTop="25dp"
     android:layout_marginRight="17dp"
     android:layout_marginBottom="30dp"
+    android:background="@drawable/progressbarcontainer"
+    android:backgroundTint="#FFFFFF"
     android:scaleX="1"
     android:scaleY="1"
-    app:cardBackgroundColor="#00C14747"
     app:cardCornerRadius="7dp"
     app:cardPreventCornerOverlap="true"
     app:layout_constraintEnd_toStartOf="parent"
     app:layout_constraintHorizontal_bias="0.122"
     app:layout_constraintVertical_bias="0.293">
 
-    <Button
-        android:id="@+id/undsBTN"
-        style="@style/MainButton"
-        android:layout_width="62dp"
-        android:layout_height="23dp"
-        android:layout_gravity="bottom|center|right"
-        android:backgroundTint="@color/secondGreen"
-        android:scaleX="1"
-        android:scaleY="1"
-        android:text="5 Unds"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <TextView
         android:id="@+id/nameProductTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_medium"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/poppins_bold"
         android:textColor="#636363"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/cantidadProductTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/containerImgProduct" />
+        app:layout_constraintTop_toBottomOf="@+id/imgProductInvent" />
 
     <TextView
         android:id="@+id/cantidadProductTV"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_gravity="bottom"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Cantidad"
         android:textColor="#FE811E"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/undsBTN"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/undsBTN"
-        tools:text="Cantidad" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/containerImgProduct"
-        android:layout_width="match_parent"
-        android:layout_height="145dp"
-        android:layout_marginBottom="76dp"
-        android:scaleX="1"
-        android:scaleY="1"
-        app:cardBackgroundColor="#FFFFFF"
-        app:cardCornerRadius="7dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Cantidad" />undsBTN
+
+    <TextView
+        android:id="@+id/undsBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="5 Uds"
+        android:textColor="#FE811E"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cantidadProductTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="5 Uds" />
+
+    <ImageView
+        android:id="@+id/imgProductInvent"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imgProductInvent"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
-            android:layout_gravity="center"
-            android:scaleType="centerInside"
-            app:srcCompat="@drawable/galleta" />
-
-        <ImageButton
-            android:id="@+id/editProductBTN"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="bottom|right"
-            android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
-            android:backgroundTint="#00FFFFFF"
-            android:baselineAlignBottom="false"
-            android:scaleType="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/editproducticon"
-            tools:srcCompat="@drawable/editproducticon" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/galleta" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

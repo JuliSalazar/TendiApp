@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".generalTende.BeneficioCreditosActivity"></activity>
+        <activity android:name=".generalTende.BeneficioBonosActivity"></activity>
         <activity android:name=".generalTende.BeneficioSegurosActivity" />
         <activity android:name=".generalTende.BeneficioAhorroActivity" />
         <activity android:name=".generalTende.BeneficioCapacitacionesActivity" />
