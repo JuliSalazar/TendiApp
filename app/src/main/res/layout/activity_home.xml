@@ -76,7 +76,7 @@
         tools:text="Productos" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/fragmentContainerU"
+        android:id="@+id/fragmentContainerT"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="16dp"

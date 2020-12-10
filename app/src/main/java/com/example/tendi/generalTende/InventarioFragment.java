@@ -14,6 +14,7 @@ import android.widget.Button;
 
 import com.example.tendi.R;
 import com.example.tendi.model.Producto;
+import com.example.tendi.usuario.Usuario;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -64,6 +65,10 @@ public class InventarioFragment extends Fragment {
                     startActivity(intent);
                 }
         );
+
+
+
+
 
         updateProducts();
 

@@ -59,8 +59,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivityForResult(i, 13);*/
         }
 
-        Log.e("CONSOLA", String.valueOf(getIntent().getExtras().getSerializable("myUser")));
-        Log.e("CONSOLA", String.valueOf(getIntent().getExtras().getSerializable("NewTend")));
+
 
         showFragment(asistenteFragment);
 
@@ -101,7 +100,7 @@ public class HomeActivity extends AppCompatActivity {
     public void showFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.fragmentContainerU,fragment);
+        transaction.replace(R.id.fragmentContainerT,fragment);
         transaction.commit();
     }
 

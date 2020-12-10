@@ -2,6 +2,7 @@ package com.example.tendi.generalTende;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -29,6 +30,8 @@ public class DetalleCompraProveedor extends AppCompatActivity {
     private TextView pDocenaProvee;
     private TextView pCargoProvee;
 
+    private Button continuarBTN;
+
     private ImageButton backBTNDetalleProve;
 
     @Override
@@ -49,6 +52,8 @@ public class DetalleCompraProveedor extends AppCompatActivity {
         pDocenaProvee = findViewById(R.id.pDocenaDetalleProve);
         pCargoProvee = findViewById(R.id.pCargoDetalleProve);
 
+        continuarBTN = findViewById(R.id.continuarCompraProveedorBTN);
+
         backBTNDetalleProve = findViewById(R.id.backDetalleProveBTN);
         backBTNDetalleProve.setOnClickListener((v)->{finish();});
 
@@ -56,11 +61,17 @@ public class DetalleCompraProveedor extends AppCompatActivity {
         Glide.with(this).load(myproveedor.getImg()).into(imgProveedor);
         nameProveedor.setText(myproveedor.getNombre());
 
-        Log.e("Consola", myproducto.getNombre());
         Glide.with(this).load(myproducto.getImg()).into(imgProducto);
         nameProductoProve.setText(myproducto.getNombre());
         pUnidProvee.setText("$ "+ myproveedor.getPrecioUnidad());
         pDocenaProvee.setText("$ "+ myproveedor.getPrecioDocena());
         pCargoProvee.setText("$ "+ myproveedor.getPrecioCargo());
+
+        continuarBTN.setOnClickListener((v)->{
+            Intent intent = new Intent(this,ConfirmarPago.class);
+            intent.putExtra("nameProduct", myproducto.getNombre());
+            startActivityForResult(intent,17);
+        });
+
     }
 }
