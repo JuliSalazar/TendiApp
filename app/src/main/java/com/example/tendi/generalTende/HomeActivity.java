@@ -30,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
     private Usuario myUser;
     private ImageButton pedidosBTN;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +43,9 @@ public class HomeActivity extends AppCompatActivity {
         notiFragment = NotifFragment.newInstance();
         perfilFragment = PerfilFragment.newInstance();
         pedidosBTN= findViewById(R.id.pedidosBTN);
+
+
+
 
         if(getIntent().getExtras().getSerializable("NewTend") != null){
             myUser = (Usuario) getIntent().getExtras().getSerializable("NewTend");
@@ -128,5 +132,6 @@ public class HomeActivity extends AppCompatActivity {
         rV.setTextViewText(R.id.nameNotif, title);
         return rV;
     }
+
 
 }
