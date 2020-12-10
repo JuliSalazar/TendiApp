@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FE811E">
+    android:background="@color/bgAppColor">
 
-    <Button
-        android:id="@+id/button4"
-        style="@style/SecondButton"
-        android:layout_width="150dp"
-        android:layout_height="35sp"
-        android:layout_marginStart="180dp"
-        android:layout_marginTop="28dp"
-        android:text="Cerrar Sesión"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="224dp"
+        android:text="Propietario: Oscar Giraldo"
+        android:textColor="@color/colorOrange"
+        android:textSize="14dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,188 +23,171 @@
         android:id="@+id/imageView28"
         android:layout_width="0dp"
         android:layout_height="213sp"
-        android:background="@drawable/tiendafondo"
+        android:background="@drawable/fondoperfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="match_parent"
-        android:layout_height="450dp"
 
+    <TextView
+        android:id="@+id/textView64"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="83dp"
+        android:background="@drawable/bgtextview"
+        android:gravity="center"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:text="Rapitienda la 11"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView28"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView64"
+        android:id="@+id/textView58"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rapitienda la 11"
-        android:textSize="35dp"
-        android:textColor="@android:color/white"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="274dp"
+        android:text="Estado del negocio:"
+        android:textColor="@color/colorOrange"
+        android:textSize="14dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.173"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout6"
-        android:layout_width="350dp"
-        android:layout_height="438dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+    <ToggleButton
+        android:id="@+id/estado"
+        android:layout_width="237dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="315dp"
+        android:background="@drawable/tgperfil"
+        android:checked="true"
+
+        android:scrollbarStyle="outsideInset"
+        android:textAllCaps="false"
+        android:textColor="@color/color"
+        android:textOff="Cerrado"
+        android:textOn="Abierto"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.796">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="438dp"
-            app:cardCornerRadius="7dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="381dp"
+        android:text="Tu dinero:"
+        android:textColor="@color/colorOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView56"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="37dp"
-                android:layout_marginTop="33dp"
-                android:text="Propietario: Oscar Giraldo"
-                android:textColor="@color/colorOrange"
-                android:textSize="14dp"
-                android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="405dp"
+        android:gravity="center"
+        android:text="$ 1’547.500"
+        android:textSize="39dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView57"
-                android:layout_width="271dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="37dp"
-                android:layout_marginTop="63dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                android:textSize="11dp" />
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="477dp"
+        android:text="Sacar"
+        android:textColor="@color/colorOrange"
 
-            <TextView
-                android:id="@+id/textView58"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="37dp"
-                android:layout_marginTop="153dp"
-                android:textColor="@color/colorOrange"
-                android:text="Estado del negocio:"
-                android:textSize="14dp"
-                android:textStyle="bold" />
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <ToggleButton
-                android:id="@+id/estado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="37dp"
-                android:layout_marginTop="183dp"
-                android:background="@drawable/tgperfil"
-                android:checked="true"
-                android:scrollbarStyle="outsideInset"
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="476dp"
+        android:text="Recargar"
+        android:textColor="@color/colorOrange"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton14"
+        app:layout_constraintStart_toStartOf="@+id/imageButton14"
+        app:layout_constraintTop_toTopOf="parent" />
 
-                android:textAllCaps="false"
-                android:textColor="@color/color"
-                android:textOff="Cerrado"
-                android:textOn="Abierto" />
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="477dp"
+        android:text="Pagar"
+        android:textColor="@color/colorOrange"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton15"
+        app:layout_constraintStart_toStartOf="@+id/imageButton15"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView59"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="37dp"
-                android:layout_marginTop="243dp"
-                android:textColor="@color/colorOrange"
-                android:text="Tu dinero:"
-                android:textStyle="bold" />
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="506dp"
+        android:background="@drawable/sacar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView60"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="273dp"
-                android:gravity="center"
-                android:text="$ 1’547.500"
-                android:textSize="25dp"
-                android:textStyle="bold" />
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="506dp"
+        android:background="@drawable/recargar"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView61"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="45dp"
-                android:layout_marginTop="323dp"
-                android:textColor="@color/colorOrange"
-                android:text="Sacar"
-                android:textSize="12dp"
-                android:textStyle="bold"
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="506dp"
+        android:background="@drawable/pagar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-                />
-
-            <TextView
-                android:id="@+id/textView62"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="145dp"
-                android:layout_marginTop="323dp"
-                android:textColor="@color/colorOrange"
-                android:text="Recargar"
-                android:textSize="12dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView63"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="269dp"
-                android:layout_marginTop="323dp"
-                android:textColor="@color/colorOrange"
-                android:text="Pagar"
-                android:textSize="12dp"
-                android:textStyle="bold" />
-
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="76dp"
-                android:layout_height="76dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="350dp"
-                android:background="@drawable/sacar" />
-
-            <ImageButton
-                android:id="@+id/imageButton14"
-                android:layout_width="76dp"
-                android:layout_height="76dp"
-                android:layout_marginLeft="136dp"
-                android:layout_marginTop="350dp"
-                android:background="@drawable/recargar" />
-
-            <ImageButton
-                android:id="@+id/imageButton15"
-                android:layout_width="76dp"
-                android:layout_height="76dp"
-                android:layout_marginLeft="250dp"
-                android:layout_marginTop="350dp"
-                android:background="@drawable/pagar" />
-
-
-        </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="150dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="610dp"
+        android:text="Cerrar Sesión"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+        android:shadowColor="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

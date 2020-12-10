@@ -76,7 +76,7 @@ public class TendActivity extends AppCompatActivity {
                     startActivity(i);
                 }
         );
-
+/*
        addBtn.setOnClickListener(
                 (v) -> {
                     index += 1;
@@ -88,7 +88,7 @@ public class TendActivity extends AppCompatActivity {
 
                 }
         );
-
+*/
         
 
         int r = 254;
