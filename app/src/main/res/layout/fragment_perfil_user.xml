@@ -6,17 +6,166 @@
     android:layout_height="match_parent"
     tools:context=".generalUser.UserMainActivity">
 
-    <TextView
-        android:id="@+id/textView35"
+    <ImageView
+        android:id="@+id/imageView28"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="242dp"
-        android:layout_marginEnd="178dp"
-        android:layout_marginBottom="398dp"
-        android:text="AQUI VA EL PERFIL"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/valentinaa"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/nombrePerfilUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Nombre: Valentina Ramirez"
+        android:textColor="@color/colorOrange"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
+
+    <TextView
+        android:id="@+id/telefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Telefono: 312 397 8127"
+        android:textColor="@color/colorOrange"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombrePerfilUser" />
+
+    <TextView
+        android:id="@+id/estadoCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Estado de la cuenta: Activo"
+        android:textColor="@color/colorOrange"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefono" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Tu dinero:"
+        android:textColor="@color/colorOrange"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/estadoCuenta" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="$ 1’547.500"
+        android:textSize="39dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView59" />
+
+    <TextView
+        android:id="@+id/textView61"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Sacar"
+
+        android:textColor="@color/colorOrange"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+    <TextView
+        android:id="@+id/textView62"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Recargar"
+        android:textColor="@color/colorOrange"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton14"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageButton14"
+        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+    <TextView
+        android:id="@+id/textView63"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Pagar"
+        android:textColor="@color/colorOrange"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton15"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="@+id/imageButton15"
+        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/sacar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView61" />
+
+    <ImageButton
+        android:id="@+id/imageButton14"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/recargar"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton15"
+        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/textView62" />
+
+    <ImageButton
+        android:id="@+id/imageButton15"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="268dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/pagar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView63" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="150dp"
+        android:layout_height="35sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/transparent"
+        android:shadowColor="@android:color/transparent"
+        android:text="Cerrar Sesión"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton14" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

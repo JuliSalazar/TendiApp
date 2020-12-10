@@ -86,7 +86,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="10dp"
-                                    android:background="@drawable/rapitiendala11"
+                                    android:background="@drawable/supermercadopuntoverde"
                                     tools:layout_editor_absoluteX="32dp"
                                     tools:layout_editor_absoluteY="259dp" />
 
@@ -96,7 +96,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="10dp"
-                                    android:background="@drawable/rapitiendala11"
+                                    android:background="@drawable/rapitiendalaluna"
                                     tools:layout_editor_absoluteX="32dp"
                                     tools:layout_editor_absoluteY="259dp" />
 
@@ -116,7 +116,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="20dp"
-                                    android:background="@drawable/rapitiendala11"
+                                    android:background="@drawable/supertiendaelpaisa"
                                     tools:layout_editor_absoluteX="32dp"
                                     tools:layout_editor_absoluteY="259dp" />
 
@@ -173,7 +173,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="33dp"
                                     android:layout_marginRight="10dp"
-                                    android:background="@drawable/rapitiendala11"
+                                    android:background="@drawable/rapitiendala23"
                                     tools:layout_editor_absoluteX="32dp"
                                     tools:layout_editor_absoluteY="259dp" />
 
@@ -183,7 +183,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="10dp"
-                                    android:background="@drawable/rapitiendala11"
+                                    android:background="@drawable/rapitiendalaluna"
                                     tools:layout_editor_absoluteX="32dp"
                                     tools:layout_editor_absoluteY="259dp" />
 
@@ -193,7 +193,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="10dp"
-                                    android:background="@drawable/rapitiendala11"
+                                    android:background="@drawable/supertiendaelpaisa"
                                     tools:layout_editor_absoluteX="32dp"
                                     tools:layout_editor_absoluteY="259dp" />
 
@@ -213,7 +213,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="10dp"
                                     android:layout_marginRight="20dp"
-                                    android:background="@drawable/rapitiendala11"
+                                    android:background="@drawable/variedadespuntof"
                                     tools:layout_editor_absoluteX="32dp"
                                     tools:layout_editor_absoluteY="259dp" />
 
