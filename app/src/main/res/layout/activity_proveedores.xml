@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".generalTende.ProveedoresActivity">
 
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="wrap_content"
+        android:layout_height="133dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view16"
+        app:srcCompat="@drawable/proveedoresimg" />
+
     <View
         android:id="@+id/view16"
         android:layout_width="wrap_content"
@@ -15,16 +24,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/view14"
-        android:layout_width="wrap_content"
-        android:layout_height="87dp"
-        android:background="@color/secondGreen"
-        android:backgroundTint="@color/secondGreen"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view16" />
 
     <ImageButton
         android:id="@+id/backProveedoresBTN"
@@ -43,26 +42,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
-        android:text="@string/addProductos"
+        android:text="Añadir productos"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/backProveedoresBTN"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/view16"
         app:layout_constraintTop_toTopOf="@+id/backProveedoresBTN"
-        tools:text="@string/addProductos" />
+        tools:text="Añadir productos" />
 
     <TextView
         android:id="@+id/textView43"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
         android:text="Selecciona el proveedor"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/finan"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view14"
-        app:layout_constraintStart_toStartOf="@+id/view14"
-        app:layout_constraintTop_toBottomOf="@+id/view16" />
+        app:layout_constraintStart_toStartOf="@+id/backProveedoresBTN"
+        app:layout_constraintTop_toBottomOf="@+id/imageView44" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/proveedoresRecyclerV"
@@ -73,5 +72,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view14" />
+        app:layout_constraintTop_toBottomOf="@+id/textView43" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="34dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

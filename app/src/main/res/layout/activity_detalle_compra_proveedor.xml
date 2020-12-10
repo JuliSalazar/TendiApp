@@ -248,7 +248,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/continuarCompraProveedorBTN"
         style="@style/MainButton"
         android:layout_width="117dp"
         android:layout_height="35dp"
@@ -263,12 +263,13 @@
         android:id="@+id/textView59"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="35dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins_bold"
         android:text="$96000"
+        android:textColor="@color/secondGreen"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView58"
-        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+        app:layout_constraintEnd_toEndOf="@+id/imageView25"
         app:layout_constraintTop_toTopOf="@+id/textView58" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

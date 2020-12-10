@@ -141,7 +141,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
-        android:id="@+id/agregarProductosInvent"
+        android:id="@+id/comprarProductosInvent"
         style="@style/MainButton"
         android:layout_width="156dp"
         android:layout_height="33dp"
@@ -162,7 +162,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/agregarProductosInvent"
-        app:layout_constraintTop_toTopOf="@+id/agregarProductosInvent" />
+        app:layout_constraintStart_toEndOf="@+id/comprarProductosInvent"
+        app:layout_constraintTop_toTopOf="@+id/comprarProductosInvent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
