@@ -47,6 +47,10 @@ public class ProveedoresActivity extends AppCompatActivity {
         proveedoresAdapter.setProducto(myProduct);
         proveedoresRef = db.collection("Productos").document(myProduct.getId()).collection("Proveedores");
         updateProveedores();
+
+        if(String.valueOf(getIntent().getExtras().getString("añadiendo")).equals("añadirProducto")){
+            proveedoresAdapter.setAdding(String.valueOf(getIntent().getExtras().getString("añadiendo")));
+        }
     }
     public void updateProveedores(){
         proveedoresAdapter.clearList();

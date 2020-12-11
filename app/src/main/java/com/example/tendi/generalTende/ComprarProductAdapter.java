@@ -19,6 +19,7 @@ import java.util.ArrayList;
 public class ComprarProductAdapter extends RecyclerView.Adapter<ComprarProductView> implements ComprarProductView.onProductItemAction{
 
     private ArrayList<Producto> productos;
+    private String adding = "nada";
 
     public ComprarProductAdapter() {
         this.productos = new ArrayList<>();
@@ -63,8 +64,17 @@ public class ComprarProductAdapter extends RecyclerView.Adapter<ComprarProductVi
 
     @Override
     public void showProveedor(Producto product, View v) {
+
+
         Intent i = new Intent(v.getContext(), ProveedoresActivity.class);
         i.putExtra("miProducto", (Serializable) product);
+        if(adding.equals("añadirProducto")){
+            i.putExtra("añadiendo", "añadirProducto");
+        }
         v.getContext().startActivity(i);
+    }
+
+    public void setAdding(String ad){
+        this.adding = ad;
     }
 }
