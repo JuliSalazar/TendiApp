@@ -18,7 +18,7 @@
 
 
     <TextView
-        android:id="@+id/nombrePerfilUser"
+        android:id="@+id/nombreusuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView28" />
 
     <TextView
-        android:id="@+id/telefono"
+        android:id="@+id/numerotell"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -41,7 +41,7 @@
         android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombrePerfilUser" />
+        app:layout_constraintTop_toBottomOf="@+id/nombreusuario" />
 
     <TextView
         android:id="@+id/estadoCuenta"
@@ -54,7 +54,7 @@
         android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefono" />
+        app:layout_constraintTop_toBottomOf="@+id/numerotell" />
 
     <TextView
         android:id="@+id/textView59"
@@ -69,13 +69,13 @@
         app:layout_constraintTop_toBottomOf="@+id/estadoCuenta" />
 
     <TextView
-        android:id="@+id/textView60"
+        android:id="@+id/dinero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:layout_marginTop="8dp"
         android:gravity="center"
-        android:text="$ 1’547.500"
+        android:text="$ 28.000"
         android:textSize="39dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,7 +86,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Sacar"
+        android:text="Retirar"
 
         android:textColor="@color/colorOrange"
         android:textSize="12dp"
@@ -94,7 +94,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageButton2"
         app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+        app:layout_constraintTop_toBottomOf="@+id/dinero" />
 
     <TextView
         android:id="@+id/textView62"
@@ -108,7 +108,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageButton14"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageButton14"
-        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+        app:layout_constraintTop_toBottomOf="@+id/dinero" />
 
     <TextView
         android:id="@+id/textView63"
@@ -122,7 +122,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageButton15"
         app:layout_constraintHorizontal_bias="0.277"
         app:layout_constraintStart_toStartOf="@+id/imageButton15"
-        app:layout_constraintTop_toBottomOf="@+id/textView60" />
+        app:layout_constraintTop_toBottomOf="@+id/dinero" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -154,16 +154,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView63" />
 
-    <Button
+    <ImageButton
         android:id="@+id/button4"
-        android:layout_width="150dp"
-        android:layout_height="35sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:background="@android:color/transparent"
-        android:shadowColor="@android:color/transparent"
-        android:text="Cerrar Sesión"
-        android:textAllCaps="false"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/cerrarsesion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton14" />
 
