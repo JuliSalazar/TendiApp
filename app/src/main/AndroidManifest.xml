@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".generalTende.PedidoProveedoresConfirmPopUp"></activity>
+        <activity android:name=".generalTende.PedidoProveedoresConfirmPopUp" android:theme="@style/AppTheme.TemaPopUp"></activity>
         <activity android:name=".generalTende.ConfirmarPago" />
         <activity android:name=".generalTende.BeneficioCreditosActivity" />
         <activity android:name=".generalTende.BeneficioBonosActivity" />
@@ -24,7 +24,6 @@
             android:theme="@style/AppTheme.TemaPopUp" />
         <activity android:name=".generalTende.DetalleCompraProveedor" />
         <activity android:name=".generalTende.ProveedoresActivity" />
-        <activity android:name=".generalTende.EditarProductoActivity" />
         <activity android:name=".generalTende.ComprarProductActivity" />
         <activity android:name=".generalUser.BolsaDeCompra" />
         <activity android:name=".generalUser.TendActivity" />

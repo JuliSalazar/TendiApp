@@ -197,7 +197,7 @@
         tools:text="Cantidad a ordenar:" />
 
     <TextView
-        android:id="@+id/textView58"
+        android:id="@+id/TVaCambiarProveedor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -263,13 +263,30 @@
         android:id="@+id/textView59"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/poppins_bold"
         android:text="$96000"
         android:textColor="@color/secondGreen"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView58"
+        app:layout_constraintBottom_toBottomOf="@+id/TVaCambiarProveedor"
         app:layout_constraintEnd_toEndOf="@+id/imageView25"
-        app:layout_constraintTop_toTopOf="@+id/textView58" />
+        app:layout_constraintTop_toTopOf="@+id/TVaCambiarProveedor" />
+
+    <EditText
+        android:id="@+id/precioProductoEDT"
+        style="@style/EditText"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/poppins_bold"
+        android:hint="Precio"
+        android:inputType="textPersonName"
+        android:phoneNumber="true"
+        android:textColor="@color/secondGreen"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/TVaCambiarProveedor"
+        app:layout_constraintEnd_toEndOf="@+id/imageView25"
+        app:layout_constraintStart_toStartOf="@+id/imageView25"
+        app:layout_constraintTop_toTopOf="@+id/TVaCambiarProveedor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

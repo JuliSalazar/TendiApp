@@ -153,7 +153,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/agregarProductoBTN"
         style="@style/MainButton"
         android:layout_width="165dp"
         android:layout_height="33dp"

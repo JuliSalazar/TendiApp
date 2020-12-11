@@ -58,8 +58,13 @@ public class HomeActivity extends AppCompatActivity {
             i.putExtra("userName",myUser.getName());
             startActivityForResult(i, 13);*/
         }
+        Log.e("CONSOLA", String.valueOf(getIntent().getFlags()));
 
+        if(String.valueOf(getIntent().getExtras().getString("confirmPago")).equals("Pedido a proveedor")){
 
+            Intent i = new Intent(this, PedidoProveedoresConfirmPopUp.class);
+            startActivity(i);
+        }
 
         showFragment(asistenteFragment);
 

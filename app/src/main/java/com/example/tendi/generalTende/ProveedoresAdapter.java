@@ -22,6 +22,7 @@ public class ProveedoresAdapter extends RecyclerView.Adapter<ProveedoresView> im
 
     private ArrayList<Proveedor> proveedores;
     private Producto producto;
+    private String adding = "nada";
 
     public ProveedoresAdapter() {
         this.proveedores = new ArrayList<>();
@@ -71,9 +72,17 @@ public class ProveedoresAdapter extends RecyclerView.Adapter<ProveedoresView> im
 
     @Override
     public void showDetail(Proveedor proveedor, View v) {
+
         Intent i = new Intent(v.getContext(), DetalleCompraProveedor.class);
         i.putExtra("elProveedor", (Serializable) proveedor);
         i.putExtra("elProducto", (Serializable) this.producto);
+        if(adding.equals("añadirProducto")){
+            i.putExtra("añadiendoDeProveedor", "añadirProducto");
+        }
         v.getContext().startActivity(i);
+    }
+
+    public void setAdding(String ad) {
+        this.adding = ad;
     }
 }

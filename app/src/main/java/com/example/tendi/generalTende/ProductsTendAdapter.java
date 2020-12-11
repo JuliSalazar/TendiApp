@@ -62,9 +62,9 @@ public class ProductsTendAdapter extends RecyclerView.Adapter<ProductInvetView> 
 
     @Override
     public void editProduct(Producto product, View v) {
-        Intent i = new Intent(v.getContext(), EditarProductoActivity.class);
+       /* Intent i = new Intent(v.getContext(), EditarProductoActivity.class);
         i.putExtra("producto", (Serializable) product);
-        v.getContext().startActivity(i);
+        v.getContext().startActivity(i);*/
 
     }
 }

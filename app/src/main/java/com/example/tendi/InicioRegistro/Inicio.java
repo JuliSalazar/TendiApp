@@ -112,6 +112,7 @@ public class Inicio extends AppCompatActivity {
                 (v)->{
                     Intent i = new Intent(this, Registro1.class);
                     startActivity(i);
+                    finish();
                 }
         );
 
@@ -120,6 +121,7 @@ public class Inicio extends AppCompatActivity {
     public void goToHome(Usuario user, Intent i){
         i.putExtra("myUser", user);
         startActivity(i);
+        finish();
     }
 
     private String getColoredSpanned(String text, String color) {

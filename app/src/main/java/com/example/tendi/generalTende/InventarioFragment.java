@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,7 @@ public class InventarioFragment extends Fragment {
     private FirebaseFirestore db;
     private CollectionReference productsRef;
     private Button addProducts;
+    private Button addProductToDB;
 
     public InventarioFragment() {
         // Required empty public constructor
@@ -58,11 +60,22 @@ public class InventarioFragment extends Fragment {
         productsRef = db.collection("Productos");
 
         addProducts = root.findViewById(R.id.comprarProductosInvent);
+        addProductToDB = root.findViewById(R.id.agregarProductoBTN);
+
+
+        addProductToDB.setOnClickListener(
+                (v)->{
+                    Intent intent = new Intent(getActivity(),ComprarProductActivity.class);
+                    intent.putExtra("AÑADIR", "añadirProducto");
+                    startActivityForResult(intent,50);
+                }
+        );
 
         addProducts.setOnClickListener(
                 (v)->{
                     Intent intent = new Intent(getActivity(),ComprarProductActivity.class);
-                    startActivity(intent);
+                    intent.putExtra("COMPRAR", "comprarProducto");
+                    startActivityForResult(intent,50);
                 }
         );
 

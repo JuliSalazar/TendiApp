@@ -5,7 +5,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -56,6 +58,9 @@ public class ComprarProductActivity extends AppCompatActivity {
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
         updateProducts();
+        if(String.valueOf(getIntent().getExtras().getString("AÑADIR")).equals("añadirProducto")){
+            comprarProductAdapter.setAdding(String.valueOf(getIntent().getExtras().getString("AÑADIR")));
+        }
 
         backBTN.setOnClickListener((v)->{finish();});
 
