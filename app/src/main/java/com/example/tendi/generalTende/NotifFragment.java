@@ -1,7 +1,10 @@
 package com.example.tendi.generalTende;
 
+import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -10,11 +13,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.tendi.R;
+import com.example.tendi.generalUser.TendActivity;
 
 
 public class NotifFragment extends Fragment {
 
-
+private Button gopedidos;
 
     public NotifFragment() {
         // Required empty public constructor
@@ -39,6 +43,18 @@ public class NotifFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_notif, container, false);
+        View root = inflater.inflate(R.layout.fragment_notif, container, false);
+
+        gopedidos = root.findViewById(R.id.goPedido);
+
+        gopedidos.setOnClickListener(
+                (v)->{
+                    Intent i = new Intent(getActivity(), Pedidos.class);
+                    startActivity(i);
+                }
+        );
+       return root;
     }
+
+
 }

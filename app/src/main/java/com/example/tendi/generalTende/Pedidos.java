@@ -39,12 +39,13 @@ public class Pedidos extends AppCompatActivity {
         nameTV = findViewById(R.id.nameTV);
         priceTV = findViewById(R.id.priceTV);
 
+        nameTV.setText("Valeria Ramirez");
+        priceTV.setText("800");
 
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                nameTV.setText(dataSnapshot.child("Name").getValue().toString());
-                priceTV.setText(dataSnapshot.child("Precio").getValue().toString());
+
             }
 
             @Override

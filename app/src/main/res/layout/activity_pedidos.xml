@@ -8,18 +8,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ImageButton
-        android:id="@+id/detalleBTN"
-        android:layout_width="382dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="4dp"
-        android:backgroundTint="#00FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView30"
-        app:srcCompat="@drawable/newbuton"
-        tools:srcCompat="@drawable/newbuton" />
+
 
     <View
         android:id="@+id/divider4"
@@ -81,20 +70,6 @@
         app:layout_constraintVertical_bias="0.037"
         tools:src="@drawable/goarrow" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="377dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="101dp" />
-
     <TextView
         android:id="@+id/textView30"
         android:layout_width="wrap_content"
@@ -106,6 +81,19 @@
         app:layout_constraintStart_toStartOf="@+id/backBTNP"
         app:layout_constraintTop_toBottomOf="@+id/backBTNP"
         tools:text="@string/nuevo" />
+
+    <ImageButton
+        android:id="@+id/detalleBTN"
+        android:layout_width="382dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView30"
+        app:srcCompat="@drawable/newbuton"
+        tools:srcCompat="@drawable/newbuton" />
 
     <TextView
         android:id="@+id/nameTV"
@@ -177,17 +165,175 @@
         app:srcCompat="@drawable/whitearrow"
         tools:srcCompat="@drawable/whitearrow" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/fragConta"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+    <TextView
+        android:id="@+id/textView82"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="29dp"
+        android:text="Pedidos en progreso"
+        android:textSize="20dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/divider4"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/detalleBTN" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout12"
+        android:layout_width="343dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/viewstyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView82">
+
+        <ImageButton
+            android:id="@+id/imageButton18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/luis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView54"
+            android:layout_width="17dp"
+            android:layout_height="14dp"
+            android:background="@drawable/goarrow"
+            android:src="@drawable/goarrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView91"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Luis Sanchez  "
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView54"
+            app:layout_constraintHorizontal_bias="0.124"
+            app:layout_constraintStart_toEndOf="@+id/imageButton18"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView91"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Solicitó un pedido. 7min"
+            app:layout_constraintStart_toEndOf="@+id/imageButton18"
+            app:layout_constraintTop_toBottomOf="@+id/textView90" />
+
+        <TextView
+            android:id="@+id/textView92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7.500"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView54"
+            app:layout_constraintHorizontal_bias="0.159"
+            app:layout_constraintStart_toEndOf="@+id/imageButton18"
+            app:layout_constraintTop_toBottomOf="@+id/textView91" />
+
+        <TextView
+            android:id="@+id/textView96"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ "
+            android:textColor="@color/colorOrange"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/textView92"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageButton18"
+            app:layout_constraintTop_toBottomOf="@+id/textView91" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
+        android:layout_width="343dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/viewstyle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout12">
+
+        <ImageView
+            android:id="@+id/imageView55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="15dp"
+            android:background="@drawable/samanta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView56"
+            android:layout_width="17dp"
+            android:layout_height="14dp"
+            android:background="@drawable/goarrow"
+            android:src="@drawable/goarrow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView94"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Samanta Urrego "
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView56"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toEndOf="@+id/imageView55"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView94"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Solicitó un pedido. 8min"
+            app:layout_constraintStart_toEndOf="@+id/imageView55"
+            app:layout_constraintTop_toBottomOf="@+id/textView93" />
+
+        <TextView
+            android:id="@+id/textView95"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3.200"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView56"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView97"
+            app:layout_constraintTop_toBottomOf="@+id/textView94" />
+
+        <TextView
+            android:id="@+id/textView97"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="$ "
+            android:textColor="@color/colorOrange"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/imageView55"
+            app:layout_constraintTop_toBottomOf="@+id/textView94" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragConta"
+    tools:ignore="InvalidId" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
