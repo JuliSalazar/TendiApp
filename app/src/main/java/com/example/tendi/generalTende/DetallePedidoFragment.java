@@ -65,6 +65,8 @@ public class DetallePedidoFragment extends Fragment {
 
         confirm = root.findViewById(R.id.confirmBTN);
 
+
+
         confirm.setOnClickListener(
                 (v)->{
                     ref.child("Pedido").child("Estado").setValue("confirmado");
@@ -74,15 +76,17 @@ public class DetallePedidoFragment extends Fragment {
                 }
         );
 
+        pedidoFrom.setText("Valentina Ramirez");
+        totalpriceTV.setText("$ 800");
+        productTV.setText("Galletas vainillas");
+        priceproduTV.setText("$ 800");
+        totalpriceTV2.setText("$ 800");
+
+
         ref.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                datas = dataSnapshot;
-                pedidoFrom.setText(dataSnapshot.child("Name").getValue().toString());
-                totalpriceTV.setText("$"+dataSnapshot.child("Precio").getValue().toString());
-                productTV.setText(dataSnapshot.child("Producto").getValue().toString());
-                priceproduTV.setText("$"+dataSnapshot.child("Precio").getValue().toString());
-                totalpriceTV2.setText("$"+dataSnapshot.child("Precio").getValue().toString());
+
             }
 
             @Override
